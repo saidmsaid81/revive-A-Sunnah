@@ -36,11 +36,16 @@
 <preference name="SplashScreenDelay" value="5000" />
     <!-- Plugins -->
 
-    <gap:platform name="android" />		
-<feature name="http://api.phonegap.com/1.0/network"/>		
-<gap:plugin name="org.apache.cordova.inappbrowser"  />		
-<gap:plugin name="org.apache.cordova.network-information"  />		
-<gap:plugin name="org.apache.cordova.splashscreen"  />	
+    <gap:platform name="android" />
+		
+<feature name="http://api.phonegap.com/1.0/network"/>
+		
+<gap:plugin name="org.apache.cordova.inappbrowser"  />
+		
+<gap:plugin name="org.apache.cordova.network-information"  />
+		
+<gap:plugin name="org.apache.cordova.splashscreen"  />
+	
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
     <!--
@@ -49,6 +54,8 @@
 <gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.8" />
 
 <gap:plugin name="nl.x-services.plugins.insomnia" version="4.0.1" />
+
+<gap:plugin name="com.google.cordova.admob" version="2.5.0" source="plugins.cordova.io" />
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
