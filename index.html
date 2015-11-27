@@ -16,23 +16,23 @@
 
 function onDeviceReady() {
       document.removeEventListener('deviceready', onDeviceReady, false);
-
-      // Set AdMobAds options:
+      
+      // Set AdMobAds options: 
       admob.setOptions({
-        publisherId:          "ca-app-pub-6981212130280607/4817464779",  // Required
-        interstitialAdId:     "ca-app-pub-XXXXXXXXXXXXXXXX/IIIIIIIIII",  // Optional
-        tappxIdiOs:           "/XXXXXXXXX/Pub-XXXX-iOS-IIII",            // Optional
-        tappxIdAndroid:       "/XXXXXXXXX/Pub-XXXX-Android-AAAA",        // Optional
-        tappxShare:           0.5                                        // Optional
+        publisherId:          "ca-app-pub-6981212130280607/4817464779",  // Required 
+        interstitialAdId:     "ca-app-pub-XXXXXXXXXXXXXXXX/IIIIIIIIII",  // Optional 
+        tappxIdiOs:           "/XXXXXXXXX/Pub-XXXX-iOS-IIII",            // Optional 
+        tappxIdAndroid:       "/XXXXXXXXX/Pub-XXXX-Android-AAAA",        // Optional 
+        tappxShare:           0.5                                        // Optional 
       });
-
-      // Start showing banners (atomatic when autoShowBanner is set to true)
+      
+      // Start showing banners (atomatic when autoShowBanner is set to true) 
       admob.createBannerView();
-
-      // Request interstitial (will present automatically when autoShowInterstitial is set to true)
-      admob.requestInterstitial();
+      
+      // Request interstitial (will present automatically when autoShowInterstitial is set to true) 
+      admob.requestInterstitialAd();
     }
-
+    
     document.addEventListener("deviceready", onDeviceReady, false);
         <script src="android_asset/www/css/socialsharing.js"></script> <script type="text/javascript" 
 <script type="text/javascript" src="android_asset/www/css/buttons.js"></script>
