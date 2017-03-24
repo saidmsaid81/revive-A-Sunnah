@@ -1,74 +1,457 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE HTML>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>The Sunnah Revival</title>
-	<link rel="stylesheet"  href="android_asset/www/css/jquery.mobile-1.3.0.css">
-	<link rel="stylesheet" href="android_asset/www/css/jqm-demos.css">
-	<link rel="stylesheet" href="android_asset/www/css/swipe-page.css">
-	<link rel="shortcut icon" href="../../favicon.ico">
-	<script src="android_asset/www/css/jquery-1.7.1.min.js"></script>
+	<head>
+		<title>The Sunnah Revival</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/jquery.mobile.min.css" />
+		<link rel="stylesheet" href="css/waves.min.css" />
+		<link rel="stylesheet" href="css/animate.css" />
+		<link rel="stylesheet" href="css/nativedroid2.css" />
+		<link rel="stylesheet" href="css/nativedroid2.color.blue.css" />
+				<style>
+					/* Prevent FOUC */
+					body { opacity: 0; }
+				</style>
+<style>
+.ui-loader 
+{
+  display: none !important;
+}
+</style
+	</head>
+	<body>
+
+		<div data-role="page" class="nd2-no-menu-swipe">
+
+
+			
+			<div data-role="header" data-position="fixed" class="wow fadeIn">
+				
+				<h1 class="wow fadeIn" data-wow-delay='0.4s'>The Sunnah Revival</h1>
+
+				<ul data-role="nd2tabs"  data-swipe="true">
+
+					<li data-tab="quran">Quran</li>
+					<li data-tab="hadith" >Hadith</li>
+					<li data-tab="sunnah" data-tab-active="true">Sunnah</li>
+					<li data-tab="dua" >Dua</li>
+					
+				</ul>
+
+			</div>
+
+			<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+
+					<div data-role="nd2tab"
+								data-tab="sunnah">
+
+				<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+
+	        <ul data-role="listview" data-filter="true" data-filter-reveal="false"  data-filter-placeholder="Search for Sunnah">
+				
+				<li><a href="cards.html#one" data-ajax="false" title="Why Revive the sunnah">Why Revive the sunnah</a></li>
+				<li><a href="cards.html#two" data-ajax="false" >How can You benefit from this app?</a></li>
+				<li><a href="cards.html#four" data-ajax="false" >Salatul Duha | The Forenoon Prayer</a></li>
+				<li><a href="cards.html#five" data-ajax="false" >Entering and leaving bathroom</a></li>
+				<li><a href="cards.html#six" data-ajax="false" >Fasting Three days of each month</a></li>
+				<li><a href="cards.html#seven" data-ajax="false" >Asking Allah for forgiveness</a></li>
+				<li><a href="cards.html#eight" data-ajax="false" >Sunnah of eating</a></li>
+				<li><a href="cards.html#three" data-ajax="false" >Sunnah of Drinking</a></li>
+				<li><a href="cards.html#nine" data-ajax="false" >Sunnah before sleeping</a></li>
+				<li><a href="cards.html#ten" data-ajax="false" >Tahajjud</a></li>
+				<li><a href="cards.html#eleven" data-ajax="false" >Responding to one who sneezes</a></li>
+				<li><a href="cards.html#twelve" data-ajax="false" >When wearing shoes putting the right shoe on first</a></li>
+				<li><a href="cards.html#thirteen" data-ajax="false" >Shaking hands when greeting each other</a></li>
+				<li><a href="cards.html#fourteen" data-ajax="false" >Two Rakah optional Prayer before Fajr</a></li>
+				<li><a href="cards.html#fifteen" data-ajax="false" >Build A House In Jannah (Paradise)</a></li>
+				<li><a href="cards.html#sixteen" data-ajax="false" >Giving Gifts</a></li>
+				<li><a href="cards.html#seventeen" data-ajax="false" >Smiling</a></li>
+				<li><a href="cards.html#eighteen" data-ajax="false" >Praying Supererogatory Prayers in the House</a></li>
+				<li><a href="cards.html#nineteen" data-ajax="false" >Seeking Permission to Enter Someones Home</a></li>
+				<li><a href="cards.html#twenty" data-ajax="false" >Greeting Children with Salam</a></li>
+				<li><a href="cards.html#twentyone" data-ajax="false" >Reciting Surat al-Mulk</a></li>
+				<li><a href="cards.html#twentytwo" data-ajax="false" >Spread the Greeting of Salam</a></li>
+				<li><a href="cards.html#twentythree" data-ajax="false" >Fasting on Mondays and Thursdays</a></li>
+				<li><a href="cards.html#twentyfour" data-ajax="false" >Sunnah when raining</a></li>
+				<li><a href="cards.html#twentyfive" data-ajax="false" >Supplicate to your brother in his absence</a></li>
+				<li><a href="cards.html#twentysix" data-ajax="false" >Sunnah acts on Friday</a></li>
+				<li><a href="cards.html#twentyseven" data-ajax="false" >Sending blessings and salutations on the Prophet صلى الله عليه وسلّم</a></li>
+				<li><a href="cards.html#twentyeight" data-ajax="false" >What to Do When Waking Up</a></li>
+				<li><a href="cards.html#twentynine" data-ajax="false" >Kind and good conduct towards neighbour</a></li>
+				<li><a href="cards.html#thirty" data-ajax="false" >Changing positions after praying a Fardh prayer in order to pray a Sunnah prayer.</a></li>
+				<li><a href="cards.html#thirtyone" data-ajax="false" >Sunnah when travelling</a></li>
+				<li><a href="cards.html#thirtytwo" data-ajax="false" >Reading Quran in a sweet sounding voice.</a></li>
+				<li><a href="cards.html#thirtythree" data-ajax="false" >Supplication When A Rooster Crows and a donkey brays</a></li>
+
+
+
+
+
+
+
+
+			
+
+											
 	
-	<script src="android_asset/www/css/jquery.mobile-1.3.0.js"></script>
-	
-	
 
-        <script src="android_asset/www/css/socialsharing.js"></script> <script type="text/javascript" 
-<script type="text/javascript" src="android_asset/www/css/buttons.js"></script>
-<script type="text/javascript" src="cordova.js"></script>
-<script src="android_asset/www/css/local-notification.js"></script>
-</head>
-<body>
+</ul>
+
+					</div>
+
+					<div data-role="nd2tab"
+								data-tab="work">
 
 
+							<ul data-role="listview" data-icon="false">
+								<li data-role="list-divider">
+									Work
+								</li>
+								<li>
+									<a href="#">
+										<img src="//lorempixel.com/150/150/people/6/" class="ui-thumbnail ui-thumbnail-circular" />
+										<h2>Gale Cecil</h2>
+										<p>gale.cecil@company.com</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="//lorempixel.com/150/150/people/5/" class="ui-thumbnail ui-thumbnail-circular" />
+										<h2>Bernard Desrosier</h2>
+										<p>bernhard.desrosier@company.com</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="//lorempixel.com/150/150/people/7/" class="ui-thumbnail ui-thumbnail-circular" />
+										<h2>Emerita Scholl</h2>
+										<p>emerita.scholl@company.com</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="//lorempixel.com/150/150/people/8/" class="ui-thumbnail ui-thumbnail-circular" />
+										<h2>Elmer Eyer</h2>
+										<p>elmer.eyer@company.com</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="//lorempixel.com/150/150/people/9/" class="ui-thumbnail ui-thumbnail-circular" />
+										<h2>Shona Mckibben</h2>
+										<p>shona.mckibben@company.com</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="//lorempixel.com/150/150/people/10/" class="ui-thumbnail ui-thumbnail-circular" />
+										<h2>Hilma Mercer</h2>
+										<p>hilma.mercer@company.com</p>
+									</a>
+								</li>
+							</ul>
+
+					</div>
+
+					<div data-role="nd2tab"
+								data-tab="holiday">
 
 
 
+								<!-- Simple Card with Title !-->
 
-<div data-role="page" id="one" class="demo-page" data-theme="f" data-next="#two">
+								<div class="nd2-card">
 
-<div data-theme="b" data-role="header" data-position="fixed">
-<a href="#nav-panel" data-icon="bars" data-role="button" data-inline="true" data-theme="e"   >Menu</a>
+									<div class="card-title has-avatar">
+										<img class="card-avatar" src="//lorempixel.com/200/200/people/9/">
+										<h3 class="card-primary-title">Power of Lavender</h3>
+										<h5 class="card-subtitle">Taken in Provence, France</h5>
+									</div>
 
-<h3><strong>The Sunnah Revival </strong></h3>
-         <button data-theme="e" onclick="window.plugins.socialsharing.share('Have a look at Surah al Mulk App', null, null, 'https://play.google.com/store/apps/details?id=com.ihyausunnah.surahalmulk')">Share App</button>
+									<div class="card-media">
+										<img src="/img/examples/card_bg_2.jpg">
+									</div>
 
-</div>
+									<div class="card-supporting-text has-action">
+										<strong>Lavandula</strong> (common name lavender) is a genus of 39 known species of flowering plants in the mint family, Lamiaceae. It is native to the Old World and is found from Cape Verde and the Canary Islands, southern Europe across to northern and eastern Africa, the Mediterranean, southwest Asia to southeast India.
+									</div>
 
-    
-<div data-role="main" class="ui-content">
-<h3>The Sunnah Revival</h3>
+									<div class="card-action">
+										<div class="row between-xs">
+											<div class="col-xs-4">
+												<div class="box">
+													<a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-mic'></i></a>
+													<a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-videocam'></i></a>
+												</div>
+											</div>
+											<div class="col-xs-8 align-right">
+												<div class="box">
+													<a href="#" class="ui-btn ui-btn-inline">Action</a>
+												</div>
+											</div>
+										</div>
+									</div>
 
-<a href="index1.html" data-role="button" data-theme="e" data-ajax="false">Revive A Sunnah Articles</a>
-<a href="index2.html" data-role="button" data-theme="e" data-ajax="false">Ramadan Sunnah</a>
-<a href="index3.html" data-role="button" data-theme="e" data-ajax="false">Dua throughout the day</a>
-<a href="fatwas.html#five" data-role="button" data-theme="e" data-ajax="false">About App</a>
-<a href="fatwas.html#one" data-role="button" data-theme="e" data-ajax="false">About App</a>
-<button data-theme="e" onclick="window.open('market://details?id=com.ihyausunnah.thesunnahrevival')">Rate this App</a>
-<button data-theme="e" onclick="window.open('sunnah.html#fiftythree');">More Apps</button>
-</div>
-
-<div data-role="panel"  data-theme="a" id="nav-panel" data-position="left" data-display="overlay">
-
-        <ul data-role="listview" data-theme="d" class="nav-search">
-	    
-            <li><a href="index1.html" data-ajax="false">Revive A Sunnah articles</a></li>
-            <li><a href="index2.html" data-ajax="false">Ramadan Sunnah</a></li>
-            <li><a href="index3.html" data-ajax="false" >Du'a throughout the Day</a></li>
-             
-<li><a href="mailto:thesunnahrevival.tsr@gmail.com?Subject=The%20Sunnah%20Revival%20App" target="_top">Send feedback</a></li>
-	     <li><a href="sunnah.html#fiftyone" data-ajax="false">About App</a></li>
-	     <li><a href="sunnah.html#fiftytwo" data-ajax="false">About The Sunnah Revival</a></li>
-            <li><button onclick="window.open('market://details?id=com.ihyausunnah.thesunnahrevival')">Rate this App</a></li>
-<li><button onclick="window.open('sunnah.html#fiftythree');">More Apps</button>
-        </ul>
-</div>
+								</div>
 
 
 
+								<!-- Simple Card No Media !-->
+
+								<div class="nd2-card">
+
+									<div class="card-title has-supporting-text">
+										<h3 class="card-primary-title">Biomaterial</h3>
+										<h5 class="card-subtitle">From Wikipedia, the free encyclopedia</h5>
+									</div>
+
+									<div class="card-supporting-text has-action has-title">
+										A biomaterial is any matter, surface, or construct that interacts with biological systems. As a science, biomaterials is about fifty years old. The study of biomaterials is called biomaterials science. It has experienced steady and strong growth over its history, with many companies investing large amounts of money into the development of new products.
+									</div>
+
+									<div class="card-action">
+										<div class="row between-xs">
+											<div class="col-xs-12">
+												<div class="box">
+													<a href="#" class="ui-btn ui-btn-inline">Applause</a>
+													<a href="#" class="ui-btn ui-btn-inline">Boooh</a>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
 
 
+								<!-- Media Card with Actions !-->
+
+								<div class="nd2-card">
+
+									<div class="card-media">
+										<img src="/img/examples/card_bg_3.jpg">
+									</div>
+
+									<div class="card-action">
+										<div class="row between-xs">
+											<div class="col-xs-12 align-right">
+												<div class="box">
+													<a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-favorite'></i></a>
+													<a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-bookmark'></i></a>
+													<a href="#" class="ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-mail-reply zmd-flip-horizontal'></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
 
 
-</div></div>
+								<!-- Media Overlay with Background !-->
+
+								<div class="nd2-card">
+
+
+									<div class="card-media">
+										<img src="/img/examples/card_bg_2.jpg">
+
+										<div class='card-media-overlay with-background'>
+
+											<div class="card-title has-supporting-text">
+												<h3 class="card-primary-title">Power of Lavender</h3>
+												<h5 class="card-subtitle">Taken in Provence, France</h5>
+											</div>
+
+											<div class="card-action">
+												<div class="row between-xs">
+													<div class="col-xs-12">
+														<div class="box">
+															<a href="#" class="ui-btn ui-btn-inline">Action 1</a>
+															<a href="#" class="ui-btn ui-btn-inline">Action 2</a>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+									</div>
+
+
+								</div>
+
+
+					</div>
+
+					<div data-role="nd2tab"
+								data-tab="colors">
+
+								<ul data-role="listview" data-icon="false">
+									<li data-role="list-divider">Available Color Sheets</li>
+
+									<li>
+										<a href="#">
+											<img class="clr-bg-red ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+											<h2>red</h2>
+											<p>nativedroid2.color.red.css</p>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="clr-bg-pink ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+											<h2>pink</h2>
+											<p>nativedroid2.color.pink.css</p>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="clr-bg-purple ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+											<h2>purple</h2>
+											<p>nativedroid2.color.purple.css</p>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="clr-bg-deep-purple ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+											<h2>deep-purple</h2>
+											<p>nativedroid2.color.deep-purple.css</p>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="clr-bg-indigo ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+											<h2>indigo</h2>
+											<p>nativedroid2.color.indigo.css</p>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="clr-bg-blue ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+											<h2>blue</h2>
+											<p>nativedroid2.color.blue.css</p>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="clr-bg-light-blue ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+											<h2>light-blue</h2>
+											<p>nativedroid2.color.light-blue.css</p>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="clr-bg-cyan ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+											<h2>cyan</h2>
+											<p>nativedroid2.color.cyan.css</p>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="clr-bg-teal ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+											<h2>teal</h2>
+											<p>nativedroid2.color.teal.css</p>
+										</a>
+									</li>
+
+
+									<li>
+										<a href="#">
+											<img class="clr-bg-green ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+											<h2>green</h2>
+											<p>nativedroid2.color.green.css</p>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="clr-bg-light-green ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+											<h2>light-green</h2>
+											<p>nativedroid2.color.light-green.css</p>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="clr-bg-lime ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+											<h2>lime</h2>
+											<p>nativedroid2.color.lime.css</p>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="clr-bg-yellow ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+											<h2>yellow</h2>
+											<p>nativedroid2.color.yellow.css</p>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="clr-bg-amber ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+											<h2>amber</h2>
+											<p>nativedroid2.color.amber.css</p>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="clr-bg-orange ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+											<h2>orange</h2>
+											<p>nativedroid2.color.orange.css</p>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="clr-bg-deep-orange ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+											<h2>deep-orange</h2>
+											<p>nativedroid2.color.deep-orange.css</p>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="clr-bg-brown ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+											<h2>brown</h2>
+											<p>nativedroid2.color.brown.css</p>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="clr-bg-blue-grey ui-thumbnail ui-thumbnail-circular" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+											<h2>blue-grey</h2>
+											<p>nativedroid2.color.blue-grey.css</p>
+										</a>
+									</li>
+								</ul>
+
+												</div>
+
+			</div>
+
+		</div>
+
+		<script src="css/jquery.min.js"></script>
+		<script src="css/jquery-ui.min.js"></script>
+		<script src="css/jquery.mobile.min.js"></script>
+		<script src="css/waves.min.js"></script>
+		<script src="css/wow.min.js"></script>
+		<script src="css/nativedroid2.js"></script>
+		<script src="css/nd2settings.js"></script>
+		<script src="cordova.js"></script>
+
+
+	</body>
+</html>
