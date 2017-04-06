@@ -8,8 +8,8 @@
 
 		<link rel="stylesheet" href="css/font-awesome.min.css" />
 		<link rel="stylesheet" href="css/jquery.mobile.min.css" />
-		<link rel="stylesheet" href="css/waves.min.css" />
-		<link rel="stylesheet" href="css/animate.css" />
+		
+		
 		<link rel="stylesheet" href="css/nativedroid2.css" />
 		<link rel="stylesheet" href="css/nativedroid2.color.blue.css" />
 				<style>
@@ -30,10 +30,11 @@
 
 
 			
-			<div data-role="header" data-position="fixed"  class="wow fadeIn" >
+			<div data-role="header"  data-position="fixed"  class="wow fadeIn" >
 				
 				<h1 class="wow fadeIn" data-wow-delay='0.4s'>The Sunnah Revival</h1>
-
+<a href="#"  class="ui-btn ui-btn-inline ui-btn-fab ui-btn-right" style="margin-right: 42px; visibility: visible; animation-delay: 1s; animation-name: fadeIn;"><i class='zmdi zmdi-notifications '></i></a>
+<a href="#popupDialog"  data-rel="popup" class="ui-btn ui-btn-inline ui-btn-fab ui-btn-right"><i class='zmdi zmdi-more-horiz'></i></a>
 				<ul data-role="nd2tabs" data-swipe="true">
 
 					<li data-tab="quran">Quran</li>
@@ -102,64 +103,87 @@
 
 </ol>
 
-					</div>
+					</div></div>
 
 					<div data-role="nd2tab"
 								data-tab="hadith">
 
 
-							<ol data-role="listview"  data-icon="false">
-								
-								<li><a href="hadith.html#one" data-ajax="false" >Imam Nawawi's 40 Hadith</a></li>
-								<li><a href="hadith.html#two" data-ajax="false" >100 Short Hadith  </a></li>
-								
-							</ol>
+							
+				<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+				 <ol data-role="listview">
+				<li><a href="hadith.html#one" data-ajax="false" >Imam Nawawi's 40 Hadith</a></li>
+				<li><a href="hadith.html#two" data-ajax="false" >100 Short Hadith</a></li>
+				
 
-					</div>
 
+
+
+
+
+
+			
+
+											
+	
+
+</ol>
+
+					</div></div>
 					<div data-role="nd2tab"
 								data-tab="quran">
 
+<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
 
-<ol data-role="listview"  data-icon="false">
-								<li data-role="list-divider">Selected Surahs</li>
-								<li><a href="quran.html#one" data-ajax="false" >Suratul Kahf</a></li>
-								<li><a href="quran.html#thirteen" data-ajax="false" >Suratul Mulk  </a></li>
-								
-							</ol>
-								</div>
+								<ol data-role="listview">
+<li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-first-child">
+													Selected Surah
+												</li>
+				<li><a href="quran.html#one" data-ajax="false" >Suratul Kahf</a></li>
+				<li><a href="quran.html#thirteen" data-ajax="false" >Suratul Mulk</a></li>
+				<li><a href="quran.html#sixteen" data-ajax="false" >Suratul Sajdah</a></li>
 
-
-
-
-					</div>
+</ol>
+					</div></div>
 
 					<div data-role="nd2tab"
 								data-tab="dua">
+<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+								<ol data-role="listview">
+				<li><a href="dua.html#one" data-ajax="false" >Dua when waking up</a></li>
+				<li><a href="dua.html#two" data-ajax="false" >Dua when leaving home</a></li>
+				<li><a href="dua.html#three" data-ajax="false" >Dua when returning home</a></li>
+				<li><a href="dua.html#four" data-ajax="false" >Rememberance in the Morning</a></li>
+				<li><a href="dua.html#five" data-ajax="false" >Rememberance in the Evening</a></li>
 
-								<ol data-role="listview" data-icon="false">
-									<li data-role="list-divider">Dua Throughout the day</li>
-
-									
-								<li><a href="dua.html#one" data-ajax="false" >Dua when waking Up</a></li>
-								<li><a href="dua.html#two" data-ajax="false" >Dua when leaving Home  </a></li>
-								<li><a href="dua.html#one" data-ajax="false" >dua when returning home</a></li>
-								<li><a href="dua.html#thirteen" data-ajax="false" >Suratul Mulk  </a></li>
-								<li><a href="dua.html#one" data-ajax="false" >Suratul Kahhf</a></li>
-								<li><a href="dua.html#thirteen" data-ajax="false" >Suratul Mulk  </a></li>
-								</ol>
+</ol>
 
 												</div>
 
 			</div>
+<div data-role="popup" id="popupDialog">
+
+                
+
+                <div data-role="content">
+                    <a href="dialog/index.html"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Share App</a>
+                    <a href="dialog/index.html"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> About App</a>
+
+                    <a href="dialog/index.html"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Rate this App</a>
+                     <a href="dialog/index.html"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Send Feedback</a>
+                      <a href="dialog/index.html"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> More Apps</a>
+
+
+                </div>
+            </div>
 
 		</div>
 
 		<script src="css/jquery.min.js"></script>
 		<script src="css/jquery-ui.min.js"></script>
 		<script src="css/jquery.mobile.min.js"></script>
-		<script src="css/waves.min.js"></script>
-		<script src="css/wow.min.js"></script>
+		
+		
 		<script src="css/nativedroid2.js"></script>
 		<script src="css/nd2settings.js"></script>
 		<script type="text/javascript" src="cordova.js"></script>
