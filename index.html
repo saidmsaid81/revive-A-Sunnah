@@ -6,7 +6,7 @@
 		<title>The Sunnah Revival</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		
 		<link rel="stylesheet" href="css/jquery.mobile.min.css" />
 		
 		
@@ -178,7 +178,22 @@
             </div>
 
 		</div>
+<script>
+       function onDeviceReady() {
+          welcomeScreen();
+       }
+        document.addEventListener("deviceready", onDeviceReady, false);
 
+        function welcomeScreen(){
+            var welcome = window.localStorage.getItem("welcome");
+            if(!welcome){
+                window.localStorage.setItem("welcome", "1");
+                alert("Welcome Message\ntesting"); // replace with welcome screen display    
+            }
+        }
+
+
+   </script>  
 		<script src="css/jquery.min.js"></script>
 		<script src="css/jquery-ui.min.js"></script>
 		<script src="css/jquery.mobile.min.js"></script>
