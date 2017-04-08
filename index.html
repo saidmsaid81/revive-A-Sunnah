@@ -22,6 +22,9 @@
   display: none !important;
 }
 </style>
+<script src="js/index.js"></script>
+
+		<script type="text/javascript" src="cordova.js"></script>
 
 	</head>
 	<body>
@@ -139,7 +142,7 @@
 <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-first-child">
 													Selected Surahs
 												</li>
-				<li><a href="quran.html#one" id='stay_on' data-ajax="false" >Suratul Kahf</a></li>
+				<li><a href="quran.html#one" onclick="window.plugins.insomnia.keepAwake();return false;" data-ajax="false" >Suratul Kahf</a></li>
 				<li><a href="quran.html#thirteen" data-ajax="false" >Suratul Mulk</a></li>
 				<li><a href="quran.html#sixteen" data-ajax="false" >Suratul Sajdah</a></li>
 
@@ -219,46 +222,7 @@
 		
 		<script src="css/nativedroid2.js"></script>
 		<script src="css/nd2settings.js"></script>
-		<script>
-       document.addEventListener('deviceready', function () {
-    // cordova.plugins.notification.local is now available
-}, false);
-          
-        cordova.plugins.notification.local.schedule({
-        	id: 11,
-    text: "Wake up!",
-    
-    every: 1 // every 30 minutes
-});
 		
-    },
-
-    $('#stay_on').click(function(){
-      window.plugins.insomnia.keepAwake(function(a) {alert('The screen will be on as you read: ' + a)}, function(b) {alert('keepAwake error: ' + b)});
-  }
-    });
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-	
-        console.log('Received Event: ' + id);
-    }
-};
-
-
-app.initialize();
-
-
-   </script> 
-   
-   
-		<script type="text/javascript" src="cordova.js"></script>
-
 
 	</body>
 </html>

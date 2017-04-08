@@ -34,26 +34,28 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-	var friday = new Date();
-		friday.setDate(friday.getDate() + (1 + 4 - friday.getDay()) % 7);
-var morning =new Date()
-		morning.setDate(friday.getDate());
-		morning.setHours(8);
-		morning.setMinutes(0);
-		morning.setSeconds(0);
-		var friday_in_morning = new Date(morning);
-
+       
+	var today = new Date();
+		var tomorrow = new Date();
+		tomorrow.setDate(today.getDate());
+		tomorrow.setHours(21);
+		tomorrow.setMinutes(00);
+		tomorrow.setSeconds(00);
+		var tomorrow_at_6_am = new Date(tomorrow);
 		cordova.plugins.notification.local.schedule({
 		id: 1,
-		title: "Have you read Surah Al Kahf",
+		title: "Reminder to recite Surah Al Mulk",
 		text: "Tap here to read now",
 	
-		firstAt: friday_in_morning,
+		firstAt: tomorrow_at_6_am,
 		every: 1440 // "minute", "hour", "week", "month", "year"
 		
 		});	
 		
     },
+
+    
+
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
