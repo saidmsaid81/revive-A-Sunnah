@@ -195,10 +195,14 @@
     alert('done');
 }, this);"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Cancel 2</a>
 
-                      <div onclick="cancel()">Single<br /><span>cancel(1)</span></div>
+                      <a href="" onclick="cordova.plugins.notification.local.update({
+    id: 1,
+    text: 'Updated notification'
+    firstAt: tomorrow,
+    data: { updated:true }
+});"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Updated
 
-                     <div onclick="clearSingle()">Single<br /><span>clear(1)</span></div>
-
+                    
                      
 
 
@@ -213,10 +217,7 @@
 
 
 
-<script type="text/javascript">
-cordova.plugins.notification.local.on("cancel", function(notification) {
-    alert("canceled: " + notification.id);
-});</script>
+
 
 
 
