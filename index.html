@@ -24,10 +24,17 @@
 </style>
 <script src="js/index.js"></script>
 
-		<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
 
 	</head>
 	<body>
+	<div class="app">
+            <h1></h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening"></p>
+                <p class="event received"></p>
+            </div>
+        </div>
 
 		<div data-role="page" class="nd2-no-menu-swipe">
 
@@ -142,7 +149,7 @@
 <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-first-child">
 													Selected Surahs
 												</li>
-				<li><a href="quran.html#one" onclick="window.plugins.insomnia.keepAwake();return false;" data-ajax="false" >Suratul Kahf</a></li>
+				<li><a href="quran.html#one" onclick="window.plugins.insomnia.keepAwake()" data-ajax="false" >Suratul Kahf</a></li>
 				<li><a href="quran.html#thirteen" data-ajax="false" >Suratul Mulk</a></li>
 				<li><a href="quran.html#sixteen" data-ajax="false" >Suratul Sajdah</a></li>
 
