@@ -49,7 +49,7 @@ var app = {
 	   sound: null
 		firstAt: tomorrow_at_6_am,
 		every: 1440 // "minute", "hour", "week", "month", "year"
-		 icon: "www/icon.png"
+		 
 		});	
 		
     },
