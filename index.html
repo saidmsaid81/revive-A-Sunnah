@@ -139,7 +139,7 @@
 <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-first-child">
 													Selected Surahs
 												</li>
-				<li><a href="quran.html#one" onclick="window.plugins.insomnia.keepAwake();return false;" data-ajax="false" >Suratul Kahf</a></li>
+				<li><a href="quran.html#one" id='stay_on' data-ajax="false" >Suratul Kahf</a></li>
 				<li><a href="quran.html#thirteen" data-ajax="false" >Suratul Mulk</a></li>
 				<li><a href="quran.html#sixteen" data-ajax="false" >Suratul Sajdah</a></li>
 
@@ -175,7 +175,7 @@
                       <a href="#three"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> More Apps</a>
 <a href="http://m.facebook.com/thesunnahrevival" onclick="window.open(this.href,'_system'); return false;" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='fa fa-facebook'></i></a>
 <a href="http://twitter.com/thesunahrevival" onclick="window.open(this.href,'_system'); return false;" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='fa fa-twitter'></i></a>
-<a href="http://telegram.com/thesunnahrevival" onclick="window.open(this.href,'_system'); return false;" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='fa fa-telegram'></i></a>
+<a href="http://telegram.me/thesunnahrevival" onclick="window.open(this.href,'_system'); return false;" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='fa fa-telegram'></i></a>
 <a href="http://instagram.com/thesunnahrevival" onclick="window.open(this.href,'_system'); return false;" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='fa fa-instagram'></i></a>
 
                 </div>
@@ -220,15 +220,23 @@
 		<script src="css/nativedroid2.js"></script>
 		<script src="css/nd2settings.js"></script>
 		<script>
-       function onDeviceReady() {
+       document.addEventListener('deviceready', function () {
+    // cordova.plugins.notification.local is now available
+}, false);
           
         cordova.plugins.notification.local.schedule({
+        	id: 11,
     text: "Wake up!",
     
     every: 1 // every 30 minutes
 });
 		
     },
+
+    $('#stay_on').click(function(){
+      window.plugins.insomnia.keepAwake(function(a) {alert('The screen will be on as you read: ' + a)}, function(b) {alert('keepAwake error: ' + b)});
+  }
+    });
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
@@ -247,7 +255,7 @@ app.initialize();
 
 
    </script> 
-   <script src="css/insomnia-plugin-demo.js"></script> 
+   
    
 		<script type="text/javascript" src="cordova.js"></script>
 
