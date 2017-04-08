@@ -195,10 +195,12 @@
                 
 
                 <div data-role="content">
-                    <a href="#" onclick="cordova.plugins.notification.local.cancel(1, function () {
-    // Notification was cancelled
-}, scope);; return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Cancel notifications </a>
-                     <a href="http://twitter.com/thesunahrevival" onclick="window.open(this.href,'_system'); return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Twitter</a>
+                    <a href="#" onclick="cordova.plugins.notification.local.cancel(1, function() {
+    alert("done");
+});"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Cancel notifications </a>
+                     <a href="" onclick="cordova.plugins.notification.local.cancelAll(function() {
+    alert("done");
+}, this);"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Cancel 2</a>
 
                      <a href="http://telegram.me/thesunnahrevival" onclick="window.open(this.href,'_system'); return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Telegram</a>
                      <a href=""http://instagram.com/thesunnahrevival" onclick="window.open(this.href,'_system'); return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Instagram</a>
@@ -217,7 +219,10 @@
 
 
 
-
+<script type="text/javascript">
+cordova.plugins.notification.local.on("cancel", function(notification) {
+    alert("canceled: " + notification.id);
+});</script>
 
 
 
