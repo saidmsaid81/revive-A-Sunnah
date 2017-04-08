@@ -9,7 +9,7 @@
 		
 		<link rel="stylesheet" href="css/jquery.mobile.min.css" />
 		
-		
+		<link rel="stylesheet" href="css/fonti-awesome.min.css" />
 		<link rel="stylesheet" href="css/nativedroid2.css" />
 		<link rel="stylesheet" href="css/nativedroid2.color.blue.css" />
 				<style>
@@ -33,7 +33,7 @@
 			<div data-role="header"  data-position="fixed"  class="wow fadeIn" >
 				
 				<h1 class="wow fadeIn" data-wow-delay='0.4s'>The Sunnah Revival</h1>
-<a href="#"  class="ui-btn ui-btn-inline ui-btn-fab ui-btn-right" style="margin-right: 42px; visibility: visible; animation-delay: 1s; animation-name: fadeIn;"><i class='zmdi zmdi-notifications '></i></a>
+<a href="#popupDialog1" data-rel="popup" class="ui-btn ui-btn-inline ui-btn-fab ui-btn-right" style="margin-right: 42px; visibility: visible; animation-delay: 1s; animation-name: fadeIn;"><i class='zmdi zmdi-notifications '></i></a>
 <a href="#popupDialog"  data-rel="popup" class="ui-btn ui-btn-inline ui-btn-fab ui-btn-right"><i class='zmdi zmdi-more-horiz'></i></a>
 				<ul data-role="nd2tabs" data-swipe="true">
 
@@ -139,7 +139,7 @@
 <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-first-child">
 													Selected Surah
 												</li>
-				<li><a href="quran.html#one" data-ajax="false" >Suratul Kahf</a></li>
+				<li><a href="quran.html#one" onclick="window.plugins.insomnia.keepAwake();return false;" data-ajax="false" >Suratul Kahf</a></li>
 				<li><a href="quran.html#thirteen" data-ajax="false" >Suratul Mulk</a></li>
 				<li><a href="quran.html#sixteen" data-ajax="false" >Suratul Sajdah</a></li>
 
@@ -166,18 +166,51 @@
                 
 
                 <div data-role="content">
-                    <a href="dialog/index.html"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Share App</a>
-                    <a href="dialog/index.html"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> About App</a>
+                    <a href="#" onclick="window.plugins.socialsharing.share('Have a look at the Sunnah Revival App \n\n', null, null, 'https://goo.gl/Ky8z01'); return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Share App</a>
+                    <a href="dua.html#six"  data-role="button" data-inline="true" data-ajax="false" class="ui-btn ui-btn-primary"> About App</a>
 
-                    <a href="dialog/index.html"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Rate this App</a>
-                     <a href="dialog/index.html"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Send Feedback</a>
-                      <a href="dialog/index.html"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> More Apps</a>
+                    <a href="market://details?id=com.ihyausunnah.thesunnahrevival"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Rate this App</a>
+                     <a href="mailto:thesunnahrevival.tsr@gmail.com?&subject=The%20Sunnah%20Revival%20App&body=**Please%20write%20your%20feedback%20here%20in%20English**%0A%0ASent%20from%3A%0AThe%20Sunnah%20Revival%20Android%20App%20Vesion%201.0.2"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Send Feedback</a>
+                     
+                      <a href="#three"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> More Apps</a>
+<a href="http://m.facebook.com/thesunnahrevival" onclick="window.open(this.href,'_system'); return false;" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='fa fa-facebook'></i></a>
+<a href="http://twitter.com/thesunahrevival" onclick="window.open(this.href,'_system'); return false;" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='fa fa-twitter'></i></a>
+<a href="http://telegram.com/thesunnahrevival" onclick="window.open(this.href,'_system'); return false;" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='fa fa-telegram'></i></a>
+<a href="http://instagram.com/thesunnahrevival" onclick="window.open(this.href,'_system'); return false;" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='fa fa-instagram'></i></a>
+
+                </div>
+            </div>
+        <div data-role="popup" id="popupDialog1">
+
+                
+
+                <div data-role="content">
+                    <a href="#" onclick="cordova.plugins.notification.local.cancel(1, function () {
+    // Notification was cancelled
+}, scope);; return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Cancel notifications </a>
+                     <a href="http://twitter.com/thesunahrevival" onclick="window.open(this.href,'_system'); return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Twitter</a>
+
+                     <a href="http://telegram.me/thesunnahrevival" onclick="window.open(this.href,'_system'); return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Telegram</a>
+                     <a href=""http://instagram.com/thesunnahrevival" onclick="window.open(this.href,'_system'); return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Instagram</a>
+                     
+                     
 
 
                 </div>
             </div>
 
+
 		</div>
+
+
+
+
+
+
+
+
+
+
 <script>
        function onDeviceReady() {
           welcomeScreen();
@@ -197,7 +230,8 @@
 		<script src="css/jquery.min.js"></script>
 		<script src="css/jquery-ui.min.js"></script>
 		<script src="css/jquery.mobile.min.js"></script>
-		
+		<script src="css/index.js"></script>
+
 		
 		<script src="css/nativedroid2.js"></script>
 		<script src="css/nd2settings.js"></script>
