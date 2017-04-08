@@ -150,8 +150,8 @@
 													Selected Surahs
 												</li>
 				<li><a href="quran.html#one" onclick="window.plugins.insomnia.keepAwake()" data-ajax="false" >Suratul Kahf</a></li>
-				<li><a href="quran.html#thirteen" data-ajax="false" >Suratul Mulk</a></li>
-				<li><a href="quran.html#sixteen" data-ajax="false" >Suratul Sajdah</a></li>
+				<li><a href="quran.html#thirteen" onclick="window.plugins.insomnia.keepAwake()" data-ajax="false" >Suratul Mulk</a></li>
+				<li><a href="quran.html#sixteen" onclick="window.plugins.insomnia.keepAwake()" data-ajax="false" >Suratul Sajdah</a></li>
 
 </ol>
 					</div></div>
@@ -196,15 +196,16 @@
 
                 <div data-role="content">
                     <a href="#" onclick="cordova.plugins.notification.local.cancel(1, function() {
-    alert("done");
-});"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Cancel notifications </a>
+    alert('done');
+}); ; return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Cancel notifications </a>
                      <a href="" onclick="cordova.plugins.notification.local.cancelAll(function() {
-    alert("done");
+    alert('done');
 }, this);"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Cancel 2</a>
 
-                     <a href="http://telegram.me/thesunnahrevival" onclick="window.open(this.href,'_system'); return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Telegram</a>
-                     <a href=""http://instagram.com/thesunnahrevival" onclick="window.open(this.href,'_system'); return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Instagram</a>
-                     
+                      <div onclick="cancel()">Single<br /><span>cancel(1)</span></div>
+
+                     <div onclick="clearSingle()">Single<br /><span>clear(1)</span></div>
+
                      
 
 
