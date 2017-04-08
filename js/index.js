@@ -46,10 +46,10 @@ var app = {
 		id: 1,
 		title: "Reminder to recite Surah Al Mulk",
 		text: "Tap here to read now",
-	    icon: "www/icon.png"
+	   sound: null
 		firstAt: tomorrow_at_6_am,
 		every: 1440 // "minute", "hour", "week", "month", "year"
-		
+		 icon: "www/icon.png"
 		});	
 		
     },
