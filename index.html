@@ -16,24 +16,8 @@
 					/* Prevent FOUC */
 					body { opacity: 0; }
 				</style>
-<script type="text/javascript">
-	 document.addEventListener('deviceready', this.onDeviceReady, false);
-	 function onDeviceReady() {
-	 	alert('Device ready...')
-	 }
 
-	 function localnotification() {
-	 	cordova.plugins.notification.local.schedule({
-		id: 1,
-		title: "Reminder to recite Surah Al Mulk",
-		text: "Tap here to read now",
-	   
-		firstAt: tomorrow_at_6_am,
-		every: 1440 // "minute", "hour", "week", "month", "year"
-		 
-		});	
-	 }
-</script>
+	
 
 	</head>
 	<body>
@@ -253,29 +237,21 @@
 
                 </div>
             </div>
-        <div data-role="popup" id="popupDialog1">
-
+        <div data-role="popup" id="popupDialog1" >
+<div data-role="header">
+		<h1 class='nd-title'>Receive Notifications for:</h1>
+	</div>
                 
 
                 <div data-role="content">
-                    <a href="#" onclick="cordova.plugins.notification.local.cancel(1, function() {
-    alert('done');
-}); ; return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Cancel notifications </a>
-                     <a href="" onclick="cordova.plugins.notification.local.cancelAll(function() {
-    alert('done');
-}, this);"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Cancel 2</a>
-
-                      <a href="" onclick="cordova.plugins.notification.local.update({
-    id: 1,
-    text: 'Updated notification'
-    firstAt: tomorrow,
-    data: { updated:true }
-});"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Updated</a>
- 
-                 <label for="xxx">Suratul Mulk</label>
-                <input type="checkbox" id="xxx" name="xxx" onclick="calc();"/>
+     <h5><strong>Daily Notifications</strong></h5>               
+ <p>Suratul Mulk 
              
-       <input type="button" value="send a notification" onclick="localnotification()">              
+       <input type="button" value="Enable" data-inline="true" onclick="localnotification()">  
+
+       <a href="#" onclick="cordova.plugins.notification.local.cancel(1, function() {
+    alert('done');
+}); ; return false;"   data-role="button" data-inline="true" > Disable </a>    </p>        
 
 
                 </div>
@@ -283,41 +259,12 @@
 
 
 		</div>
-		<script type="text/javascript">
-			var today = new Date();
-		var tomorrow = new Date();
-		tomorrow.setDate(today.getDate());
-		tomorrow.setHours(21);
-		tomorrow.setMinutes(00);
-		tomorrow.setSeconds(00);
-		var tomorrow_at_6_am = new Date(tomorrow);
-		</script>
-
-<script type="text/javascript">
-	function calc()
-{
-  if (document.getElementById('xxx').checked) 
-  {
-    cordova.plugins.notification.local.schedule({
-		id: 1,
-		title: "Reminder to recite Surah Al Mulk",
-		text: "Tap here to read now",
-	   
-		firstAt: tomorrow_at_6_am,
-		every: 1440 // "minute", "hour", "week", "month", "year"
-		 
-		});	
-  } else {
-      cordova.plugins.notification.local.cancel(1, function() {
-    alert('done');
-  }
-}
-</script>
-
+		
 		<script src="css/jquery.min.js"></script>
 		<script src="css/jquery-ui.min.js"></script>
 		<script src="css/jquery.mobile.min.js"></script>
-		
+		<script src="css/localnotification.js"></script>
+		<script src="css/time.js"></script>
 		
 
 <script type="text/javascript" src="cordova.js"></script>
