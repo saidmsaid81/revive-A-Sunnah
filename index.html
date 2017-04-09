@@ -16,20 +16,18 @@
 					/* Prevent FOUC */
 					body { opacity: 0; }
 				</style>
-
-
+<script type="text/javascript">
+	 document.addEventListener('deviceready', this.onDeviceReady, false);
+	 function onDeviceReady() {
+	 	alert('Device ready...')
+	 }
+</script>
 
 	</head>
 	<body>
-	<div class="app">
-            <h1></h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening"></p>
-                <p class="event received"></p>
-            </div>
-        </div>
+	
 
-		<div data-role="page" class="nd2-no-menu-swipe">
+		<div data-role="page"id="categories" class="nd2-no-menu-swipe">
 
 
 			
@@ -117,7 +115,26 @@
 				 <ol data-role="listview">
 				<li><a href="hadith.html#one" data-ajax="false" >Imam Nawawi's 40 Hadith</a></li>
 				<li><a href="hadith.html#two" data-ajax="false" >100 Short Hadith</a></li>
-				
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
 
 
 
@@ -147,6 +164,27 @@
 				<li><a href="quran.html#sixteen" onclick="window.plugins.insomnia.keepAwake()" data-ajax="false" >Suratul Sajdah</a></li>
 
 </ol>
+<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+
 					</div></div>
 
 					<div data-role="nd2tab"
@@ -160,6 +198,26 @@
 				<li><a href="dua.html#five" data-ajax="false" >Rememberance in the Evening</a></li>
 
 </ol>
+<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
 
 												</div>
 
@@ -200,9 +258,11 @@
     text: 'Updated notification'
     firstAt: tomorrow,
     data: { updated:true }
-});"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Updated
-
-                    
+});"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Updated</a>
+ 
+                 <label for="xxx">Suratul Mulk</label>
+                <input type="checkbox" id="xxx" name="xxx" onclick="calc();"/>
+             
                      
 
 
@@ -211,22 +271,42 @@
 
 
 		</div>
+		<script type="text/javascript">
+			var today = new Date();
+		var tomorrow = new Date();
+		tomorrow.setDate(today.getDate());
+		tomorrow.setHours(21);
+		tomorrow.setMinutes(00);
+		tomorrow.setSeconds(00);
+		var tomorrow_at_6_am = new Date(tomorrow);
+		</script>
 
-
-
-
-
-
-
-
-
-
+<script type="text/javascript">
+	function calc()
+{
+  if (document.getElementById('xxx').checked) 
+  {
+    cordova.plugins.notification.local.schedule({
+		id: 1,
+		title: "Reminder to recite Surah Al Mulk",
+		text: "Tap here to read now",
+	   
+		firstAt: tomorrow_at_6_am,
+		every: 1440 // "minute", "hour", "week", "month", "year"
+		 
+		});	
+  } else {
+      cordova.plugins.notification.local.cancel(1, function() {
+    alert('done');
+  }
+}
+</script>
 
 		<script src="css/jquery.min.js"></script>
 		<script src="css/jquery-ui.min.js"></script>
 		<script src="css/jquery.mobile.min.js"></script>
 		
-		<script src="js/index.js"></script>
+		
 
 <script type="text/javascript" src="cordova.js"></script>
 		<script src="css/nativedroid2.js"></script>
