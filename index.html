@@ -225,6 +225,10 @@
                 <div data-role="content">
                     <a href="#" onclick="window.plugins.socialsharing.share('Have a look at the Sunnah Revival App \n\n', null, null, 'https://goo.gl/Ky8z01'); return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Share App</a>
                     <a href="dua.html#six"  data-role="button" data-inline="true" data-ajax="false" class="ui-btn ui-btn-primary"> About App</a>
+<a href="#" onclick="AppRate.promptForRating(); return false;"   data-role="button" data-inline="true" >Test Rate this app </a> 
+<a href="#" onclick="AppRate.promptForRating();"   data-role="button" data-inline="true" >Test Rate this app </a> 
+<a href="#" onclick="AppRate.promptForRating(true);"   data-role="button" data-inline="true" >Test Rate this app </a>
+<a href="#" onclick="AppRate.promptForRating(); return false;"   data-role="button" data-inline="true" >Test Rate this app </a>
 
                     <a href="market://details?id=com.ihyausunnah.thesunnahrevival"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Rate this App</a>
                      <a href="mailto:thesunnahrevival.tsr@gmail.com?&subject=The%20Sunnah%20Revival%20App&body=**Please%20write%20your%20feedback%20here%20in%20English**%0A%0ASent%20from%3A%0AThe%20Sunnah%20Revival%20Android%20App%20Vesion%201.0.2"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Send Feedback</a>
@@ -275,19 +279,18 @@
 <p>Fasting(Monday/Thursday)</p>
              
       <p> <input type="button" value="Enable" data-inline="true" onclick="cordova.plugins.notification.local.schedule([{
-		id: 3,
-		title: 'The Sunnah Revival',
-		text: 'Reminder To fast Tomorrow Monday',
-		firstAt: sunday_in_night,
-		every: 10080 // 
-		,{
-		id: 4,
-		title: 'The Sunnah Revival',
-		text: 'Reminder To fast Tomorrow Thursday',
-		firstAt: wednesday_in_evening,
-		every: 10080 // "minute", "hour", "week", "month", "year"
-		
-		}]);">  
+    id: 3,
+    title: 'The Sunnah Revival',
+    text: 'Reminder To fast Tomorrow Monday',
+    firstAt: sunday_in_night,
+   every: 10080
+},{
+    id: 4,
+    title: 'The Sunnah Revival',
+	text: 'Reminder To fast Tomorrow Thursday',
+   firstAt: wednesday_in_evening,
+	every: 10080
+}]); ">  
 
        <a href="#" onclick="cordova.plugins.notification.local.cancel(3,4, function() {
     alert('done');
@@ -303,6 +306,14 @@
 		<script src="css/jquery-ui.min.js"></script>
 		<script src="css/jquery.mobile.min.js"></script>
 		<script src="css/localnotification.js"></script>
+		<script type="text/javascript">
+			
+AppRate.preferences.storeAppURL.android = 'market://details?id=*insert app id*';
+AppRate.preferences.openStoreInApp = true;
+AppRate.preferences.displayAppName = 'The Sunnah Revival App';
+AppRate.preferences.usesUntilPrompt = 1;
+AppRate.preferences.promptAgainForEachNewVersion = false;
+		</script>
 		<script src="css/time.js"></script>
 		
 
