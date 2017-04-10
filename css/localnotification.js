@@ -6,7 +6,7 @@ document.addEventListener('deviceready', this.onDeviceReady, false);
         AppRate.preferences.displayAppName = 'The Sunnah Revival';
         AppRate.preferences.usesUntilPrompt = 2;
          AppRate.preferences.promptAgainForEachNewVersion = false;
-         AppRate.promptForRating();
+        
 	 	
 	 }
 
