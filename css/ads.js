@@ -1,10 +1,9 @@
-
-  // place our admob ad unit id here
+ // place our admob ad unit id here
   var admobid = {};
   if( /(android)/i.test(navigator.userAgent) ) {
     admobid = { // for Android
-      banner: ' ca-app-pub-6981212130280607/2899891177',
-      interstitial: ' ca-app-pub-6981212130280607/4376624370'
+      banner: 'ca-app-pub-6981212130280607/2899891177',
+      interstitial: 'ca-app-pub-6981212130280607/4376624370'
     };
   } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
     admobid = { // for iOS
@@ -30,21 +29,21 @@
     if(AdMob) AdMob.showBanner( $('#adPosition').val() );
   }
   function onDeviceReady() {
-    if (! AdMob) {  return; }
+    if (! AdMob) { alert( 'admob plugin not ready' ); return; }
     initAd();
     // display a banner at startup
     createSelectedBanner();
   }
   function initAd(){
     AdMob.getAdSettings(function(info){
-      
+      console.log('adId: ' + info.adId + '\n' + 'adTrackingEnabled: ' + info.adTrackingEnabled);
     }, function(){
-      
+      console.log('failed to get user ad settings');
     });
     AdMob.setOptions({
       // adSize: 'SMART_BANNER',
       position: AdMob.AD_POSITION.BOTTOM_CENTER,
-      isTesting: true, // set to true, to receiving test ad for testing purpose
+      isTesting: false, // set to true, to receiving test ad for testing purpose
       bgColor: 'black', // color name, or '#RRGGBB'
       // autoShow: true // auto show interstitial ad when loaded, set to false if prepare/show
       // offsetTopBar: false, // avoid overlapped by status bar, for iOS7+
@@ -54,7 +53,11 @@
       // when jquery used, it will hijack the event, so we have to get data from original event
       if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
       var data = e.detail || e.data || e;
-       // adType: 'banner', 'interstitial', etc.
+      alert('error: ' + data.error +
+          ', reason: ' + data.reason +
+          ', adNetwork:' + data.adNetwork +
+          ', adType:' + data.adType +
+          ', adEvent:' + data.adEvent); // adType: 'banner', 'interstitial', etc.
     });
     $(document).on('onAdLoaded', function(e){
     });
@@ -103,3 +106,4 @@
       onDeviceReady();
     }
   });
+
