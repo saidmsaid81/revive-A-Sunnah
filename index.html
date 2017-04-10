@@ -253,7 +253,7 @@
       <p> <input type="button" value="Enable" data-inline="true" onclick="localnotification()">  
 
        <a href="#" onclick="cordova.plugins.notification.local.cancel(1, function() {
-    window.plugins.toast.showLongBottom('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})"
+    window.plugins.toast.showLongBottom('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
 }); ; return false;"   data-role="button" data-inline="true" > Disable </a>    </p>        
 
 <h5><strong>Weekly Notifications <a href="cards.html#twentysix" class="ui-btn ui-btn-inline  ui-btn-fab" data-ajax="false"><i class='zmdi zmdi-info'></i></a>
@@ -311,6 +311,7 @@
 		<script src="css/localnotification.js"></script>
 		<script src="css/ads.js"></script>
 		<script type="text/javascript">
+		function AppRate.promptForRating();{
 AppRate.preferences = {
   openStoreInApp: true,
   displayAppName: 'The Sunnah Revival App',
@@ -331,8 +332,8 @@ AppRate.preferences = {
     rateButtonLabel: "Rate It Now"
   }
 };
+}
 
-AppRate.promptForRating();
 		</script>
 		<script type="text/javascript">
 			
@@ -344,7 +345,7 @@ function localnotification() {
 	   
 		firstAt: tomorrow_at_6_am,
 		every: 1440 // "minute", "hour", "week", "month", "year"
-		icon: 'file://www/icon.png'
+		icon: 'file://icon.png'
 		})	
 	 }
 		</script>
