@@ -226,11 +226,10 @@
                     <a href="#" onclick="window.plugins.socialsharing.share('Have a look at the Sunnah Revival App \n\n', null, null, 'https://goo.gl/Ky8z01'); return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Share App</a>
                     <a href="dua.html#six"  data-role="button" data-inline="true" data-ajax="false" class="ui-btn ui-btn-primary"> About App</a>
                     
-                <a href="#" onclick="AppRate.promptForRating(false); return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Test App</a>
                     <a href="market://details?id=com.ihyausunnah.thesunnahrevival"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Rate this App</a>
                      <a href="mailto:thesunnahrevival.tsr@gmail.com?&subject=The%20Sunnah%20Revival%20App&body=**Please%20write%20your%20feedback%20here%20in%20English**%0A%0ASent%20from%3A%0AThe%20Sunnah%20Revival%20Android%20App%20Vesion%201.0.2"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Send Feedback</a>
                      
-                      <a href="#three"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> More Apps</a>
+                      <a href="dua.html#seven"  data-role="button" data-inline="true" data-ajax="false" class="ui-btn ui-btn-primary"> More Apps</a>
 <a href="http://m.facebook.com/thesunnahrevival" onclick="window.open(this.href,'_system'); return false;" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='fa fa-facebook'></i></a>
 <a href="http://twitter.com/thesunahrevival" onclick="window.open(this.href,'_system'); return false;" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='fa fa-twitter'></i></a>
 <a href="http://telegram.me/thesunnahrevival" onclick="window.open(this.href,'_system'); return false;" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='fa fa-telegram'></i></a>
@@ -309,6 +308,9 @@
 		<script src="css/jquery.mobile.min.js"></script>
 		
 		<script src="css/localnotification.js"></script>
+		<script type="text/javascript">
+			AppRate.promptForRating(false);
+		</script>
 		<script type="text/javascript">
 			function welcomeScreen(){
             var welcome = window.localStorage.getItem("welcome");
