@@ -53,11 +53,7 @@
       // when jquery used, it will hijack the event, so we have to get data from original event
       if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
       var data = e.detail || e.data || e;
-      alert('error: ' + data.error +
-          ', reason: ' + data.reason +
-          ', adNetwork:' + data.adNetwork +
-          ', adType:' + data.adType +
-          ', adEvent:' + data.adEvent); // adType: 'banner', 'interstitial', etc.
+     // adType: 'banner', 'interstitial', etc.
     });
     $(document).on('onAdLoaded', function(e){
     });
