@@ -13,8 +13,8 @@ document.addEventListener('deviceready', this.onDeviceReady, false);
 		every: 1440 // "minute", "hour", "week", "month", "year"
 		 
 		});	
-	 };
-	 function localnotification1() {
+	 }
+	 function localnotificationo() {
 	 	cordova.plugins.notification.local.schedule({
 		id: 2,
 		title: "Have you read Surah Al Kahf",
@@ -25,9 +25,9 @@ document.addEventListener('deviceready', this.onDeviceReady, false);
 		
 		});	
 		
-    },
-    function localnotification2() {
-	 	cordova.plugins.notification.local.schedule({
+    }
+    function localnotificationoo() {
+	 	cordova.plugins.notification.local.schedule([{
 		id: 3,
 		title: "The Sunnah Revival",
 		text: "Reminder To fast Tomorrow Monday",
@@ -35,7 +35,7 @@ document.addEventListener('deviceready', this.onDeviceReady, false);
 		firstAt: sunday_in_night,
 		every: 10080 // "minute", "hour", "week", "month", "year"
 		
-		});	
+		}	
 
 		
 	 	cordova.plugins.notification.local.schedule({
@@ -46,5 +46,5 @@ document.addEventListener('deviceready', this.onDeviceReady, false);
 		firstAt: wednesday_in_evening,
 		every: 10080 // "minute", "hour", "week", "month", "year"
 		
-		});	
+		}]);	
 	 }
