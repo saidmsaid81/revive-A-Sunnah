@@ -3,7 +3,7 @@
 <html>
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		
+		<title>The Sunnah Revival</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 		
@@ -17,10 +17,7 @@
 					body { opacity: 0; }
 				</style>
 
-	<script>
-alert('\uf1fe')
-
-</script>
+	
 
 	</head>
 	<body>
@@ -228,8 +225,8 @@ alert('\uf1fe')
                 <div data-role="content">
                     <a href="#" onclick="window.plugins.socialsharing.share('Have a look at the Sunnah Revival App \n\n', null, null, 'https://goo.gl/Ky8z01'); return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Share App</a>
                     <a href="dua.html#six"  data-role="button" data-inline="true" data-ajax="false" class="ui-btn ui-btn-primary"> About App</a>
-                     <a href="#" onclick="AppRate.promptForRating(); " data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> test this App</a>
-
+                    
+                <a href="#" onclick="AppRate.promptForRating(); return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Test App</a>
                     <a href="market://details?id=com.ihyausunnah.thesunnahrevival"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Rate this App</a>
                      <a href="mailto:thesunnahrevival.tsr@gmail.com?&subject=The%20Sunnah%20Revival%20App&body=**Please%20write%20your%20feedback%20here%20in%20English**%0A%0ASent%20from%3A%0AThe%20Sunnah%20Revival%20Android%20App%20Vesion%201.0.2"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Send Feedback</a>
                      
@@ -310,8 +307,22 @@ alert('\uf1fe')
 		<script src="css/jquery.min.js"></script>
 		<script src="css/jquery-ui.min.js"></script>
 		<script src="css/jquery.mobile.min.js"></script>
-		<script type="text/javascript" src="cordova.js"></script>
+		
 		<script src="css/localnotification.js"></script>
+		<script type="text/javascript">
+			function welcomeScreen(){
+            var welcome = window.localStorage.getItem("welcome");
+            if(!welcome){
+                window.localStorage.setItem("welcome", "1");
+               navigator.notification.alert(
+    'Tap the bell icon above to manage reminders such as Suratul Kahf reminders on Friday',  // message
+    null,
+    'Tutorial',            // title
+    'Got It'                  // buttonName
+); // replace with welcome screen display    
+            }
+        }
+		</script>
 		<script src="css/ads.js"></script>
 		
 		<script type="text/javascript">
@@ -331,25 +342,14 @@ function localnotification() {
 		<script src="css/time.js"></script>
 		
 
-
+<script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript">
-		var customLocale = {};
-customLocale.title = "Rate %@";
-customLocale.message = "If you enjoy using %@, would you mind taking a moment to rate it? It won’t take more than a minute. Thanks for your support!";
-customLocale.cancelButtonLabel = "No, Thanks";
-customLocale.laterButtonLabel = "Remind Me Later";
-customLocale.rateButtonLabel = "Rate It Now";
-
-AppRate.preferences.openStoreInApp = true;
-AppRate.preferences.storeAppURL.ios = '<my_app_id>';
-AppRate.preferences.storeAppURL.android = 'market://details?id=com.ihyausunnah.thesunnahrevival';
-AppRate.preferences.customLocale = customLocale;
-AppRate.preferences.displayAppName = 'My custom app title';
-AppRate.preferences.usesUntilPrompt = 2;
-AppRate.preferences.promptAgainForEachNewVersion = false;
-AppRate.promptForRating();
-
-		</script>
+	AppRate.preferences.storeAppURL.android = 'market://details?id=com.ihyausunnah.thesunnahrevival';
+	ppRate.preferences.openStoreInApp = true;
+	AppRate.preferences.displayAppName = 'My custom app title';
+	AppRate.preferences.usesUntilPrompt = 2;
+	AppRate.preferences.promptAgainForEachNewVersion = false;
+</script>
 		<script src="css/nativedroid2.js"></script>
 		<script src="css/nd2settings.js"></script>
 		

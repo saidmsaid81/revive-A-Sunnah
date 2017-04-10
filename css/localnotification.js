@@ -1,8 +1,10 @@
 document.addEventListener('deviceready', this.onDeviceReady, false);
 	 function onDeviceReady() {
-	 	 welcomeScreen();welcomeScreeni()
+	 	 welcomeScreen();
 	 	
 	 }
+
+
 
 	 
 	 
