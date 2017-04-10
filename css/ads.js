@@ -2,8 +2,8 @@
   var admobid = {};
   if( /(android)/i.test(navigator.userAgent) ) {
     admobid = { // for Android
-      banner: 'ca-app-pub-6981212130280607/2899891177',
-      interstitial: 'ca-app-pub-6981212130280607/4376624370'
+      banner: 'ca-app-pub-6981212130280607/8129501976',
+      interstitial: 'ca-app-pub-6981212130280607/9606235175'
     };
   } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
     admobid = { // for iOS
@@ -43,7 +43,7 @@
     AdMob.setOptions({
       // adSize: 'SMART_BANNER',
       position: AdMob.AD_POSITION.BOTTOM_CENTER,
-      isTesting: false, // set to true, to receiving test ad for testing purpose
+      isTesting: true, // set to true, to receiving test ad for testing purpose
       bgColor: 'black', // color name, or '#RRGGBB'
       // autoShow: true // auto show interstitial ad when loaded, set to false if prepare/show
       // offsetTopBar: false, // avoid overlapped by status bar, for iOS7+
@@ -106,4 +106,3 @@
       onDeviceReady();
     }
   });
-
