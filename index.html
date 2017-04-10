@@ -310,24 +310,7 @@
 		
 		<script src="css/localnotification.js"></script>
 		<script src="css/ads.js"></script>
-		<script type="text/javascript">
-		var customLocale = {};
-customLocale.title = "Rate %@";
-customLocale.message = "If you enjoy using %@, would you mind taking a moment to rate it? It won’t take more than a minute. Thanks for your support!";
-customLocale.cancelButtonLabel = "No, Thanks";
-customLocale.laterButtonLabel = "Remind Me Later";
-customLocale.rateButtonLabel = "Rate It Now";
-
-AppRate.preferences.openStoreInApp = true;
-AppRate.preferences.storeAppURL.ios = '<my_app_id>';
-AppRate.preferences.storeAppURL.android = 'market://details?id=com.ihyausunnah.thesunnahrevival';
-AppRate.preferences.customLocale = customLocale;
-AppRate.preferences.displayAppName = 'My custom app title';
-AppRate.preferences.usesUntilPrompt = 2;
-AppRate.preferences.promptAgainForEachNewVersion = false;
-AppRate.promptForRating();
-
-		</script>
+		
 		<script type="text/javascript">
 			
 function localnotification() {
@@ -346,6 +329,24 @@ function localnotification() {
 		
 
 <script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript">
+		var customLocale = {};
+customLocale.title = "Rate %@";
+customLocale.message = "If you enjoy using %@, would you mind taking a moment to rate it? It won’t take more than a minute. Thanks for your support!";
+customLocale.cancelButtonLabel = "No, Thanks";
+customLocale.laterButtonLabel = "Remind Me Later";
+customLocale.rateButtonLabel = "Rate It Now";
+
+AppRate.preferences.openStoreInApp = true;
+AppRate.preferences.storeAppURL.ios = '<my_app_id>';
+AppRate.preferences.storeAppURL.android = 'market://details?id=com.ihyausunnah.thesunnahrevival';
+AppRate.preferences.customLocale = customLocale;
+AppRate.preferences.displayAppName = 'My custom app title';
+AppRate.preferences.usesUntilPrompt = 2;
+AppRate.preferences.promptAgainForEachNewVersion = false;
+AppRate.promptForRating();
+
+		</script>
 		<script src="css/nativedroid2.js"></script>
 		<script src="css/nd2settings.js"></script>
 		
