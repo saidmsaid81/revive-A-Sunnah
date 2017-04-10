@@ -250,10 +250,10 @@
             
  <p>Suratul Mulk</p> 
              
-      <p> <input type="button" value="Enable" data-inline="true" onclick="localnotification();window.plugins.toast.showLongBottom('Successfully Enabled ', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})">  
+      <p> <input type="button" value="Enable" data-inline="true" onclick="localnotification();window.plugins.toast.showLongTop('Successfully Enabled ', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})">  
 
        <a href="#" onclick="cordova.plugins.notification.local.cancel(1, function() {
-    window.plugins.toast.showLongBottom('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
+    window.plugins.toast.showLongTop('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
 }); ; return false;"   data-role="button" data-inline="true" > Disable </a>    </p>        
 
 <h5><strong>Weekly Notifications <a href="cards.html#twentysix" class="ui-btn ui-btn-inline  ui-btn-fab" data-ajax="false"><i class='zmdi zmdi-info'></i></a>
@@ -267,10 +267,10 @@
 		text: 'Tap here to read now',
 	    firstAt: friday_in_morning,
 		every: 10080 // 
-		});window.plugins.toast.showLongBottom('Successfully enabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})">  
+		});window.plugins.toast.showLongTop('Successfully enabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})">  
 
        <a href="#" onclick="cordova.plugins.notification.local.cancel(2, function() {
-   window.plugins.toast.showLongBottom('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
+   window.plugins.toast.showLongTop('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
 }); ; return false;"   data-role="button" data-inline="true" > Disable </a>    </p>      
 
 <p>Fasting(Monday/Thursday)</p>
@@ -287,13 +287,13 @@
 	text: 'Reminder To fast Tomorrow Thursday',
    firstAt: wednesday_in_evening,
 	every: 10080
-}]);window.plugins.toast.showLongBottom('Successfully enabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)}) ">  
+}]);window.plugins.toast.showLongTop('Successfully enabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)}) ">  
 
        <a href="#" onclick="cordova.plugins.notification.local.cancel([3, 4], function() {
-    window.plugins.toast.showLongBottom('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
+    window.plugins.toast.showLongTop('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
 }); return false;"   data-role="button" data-inline="true" > Disable </a>    </p>  
 <a href="#" onclick="cordova.plugins.notification.local.cancelAll(function() {
-    window.plugins.toast.showLongBottom('Successfully Disabled All', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
+    window.plugins.toast.showLongTop('Successfully Disabled All', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
 }, this);"   data-role="button" class="ui-btn clr-btn-blue" data-inline="true" > Disable All </a>
 
 
@@ -314,7 +314,7 @@
 		AppRate.preferences = {
   openStoreInApp: true,
   displayAppName: 'My custom app title',
-  usesUntilPrompt: 5,
+  usesUntilPrompt: 2,
   promptAgainForEachNewVersion: false,
   storeAppURL: {
     ios: '<my_app_id>',
