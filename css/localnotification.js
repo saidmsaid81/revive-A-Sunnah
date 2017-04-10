@@ -12,7 +12,7 @@ document.addEventListener('deviceready', this.onDeviceReady, false);
 		firstAt: tomorrow_at_6_am,
 		every: 1440 // "minute", "hour", "week", "month", "year"
 		 
-		});	
+		})	
 	 }
 	 function localnotificationo() {
 	 	cordova.plugins.notification.local.schedule({
@@ -23,7 +23,7 @@ document.addEventListener('deviceready', this.onDeviceReady, false);
 		firstAt: friday_in_morning,
 		every: 10080 // "minute", "hour", "week", "month", "year"
 		
-		});	
+		})	
 		
     }
     function localnotificationoo() {
@@ -34,11 +34,8 @@ document.addEventListener('deviceready', this.onDeviceReady, false);
 	
 		firstAt: sunday_in_night,
 		every: 10080 // "minute", "hour", "week", "month", "year"
-		
-		}	
-
-		
-	 	cordova.plugins.notification.local.schedule({
+		,{
+			
 		id: 4,
 		title: "The Sunnah Revival",
 		text: "Reminder To fast Tomorrow Thursday",
