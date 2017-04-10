@@ -225,7 +225,7 @@
                 <div data-role="content">
                     <a href="#" onclick="window.plugins.socialsharing.share('Have a look at the Sunnah Revival App \n\n', null, null, 'https://goo.gl/Ky8z01'); return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Share App</a>
                     <a href="dua.html#six"  data-role="button" data-inline="true" data-ajax="false" class="ui-btn ui-btn-primary"> About App</a>
-                     <a href="#" onclick="AppRate.promptForRating(); " data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> test this App</a>
+                     <a href="#" onclick="AppRate.promptForRatingi(); " data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> test this App</a>
 
                     <a href="market://details?id=com.ihyausunnah.thesunnahrevival"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Rate this App</a>
                      <a href="mailto:thesunnahrevival.tsr@gmail.com?&subject=The%20Sunnah%20Revival%20App&body=**Please%20write%20your%20feedback%20here%20in%20English**%0A%0ASent%20from%3A%0AThe%20Sunnah%20Revival%20Android%20App%20Vesion%201.0.2"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Send Feedback</a>
@@ -250,7 +250,7 @@
             
  <p>Suratul Mulk</p> 
              
-      <p> <input type="button" value="Enable" data-inline="true" onclick="localnotification()">  
+      <p> <input type="button" value="Enable" data-inline="true" onclick="localnotification();window.plugins.toast.showLongBottom('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})">  
 
        <a href="#" onclick="cordova.plugins.notification.local.cancel(1, function() {
     window.plugins.toast.showLongBottom('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
@@ -267,10 +267,10 @@
 		text: 'Tap here to read now',
 	    firstAt: friday_in_morning,
 		every: 10080 // 
-		})">  
+		});window.plugins.toast.showLongBottom('Successfully enabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})">  
 
        <a href="#" onclick="cordova.plugins.notification.local.cancel(2, function() {
-    alert('done');
+   window.plugins.toast.showLongBottom('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
 }); ; return false;"   data-role="button" data-inline="true" > Disable </a>    </p>      
 
 <p>Fasting(Monday/Thursday)</p>
@@ -294,8 +294,7 @@
 }); return false;"   data-role="button" data-inline="true" > Disable </a>    </p>  
 <a href="#" onclick="cordova.plugins.notification.local.cancelAll(function() {
     alert('done');
-}, this);"   data-role="button" data-role="toast"
-   data-toast-message="Simple toast message set by data-message"  class="ui-btn clr-btn-blue" data-inline="true" > Disable All </a>
+}, this);"   data-role="button" class="ui-btn clr-btn-blue" data-inline="true" > Disable All </a>
 
 
                 </div>
@@ -312,7 +311,7 @@
 		<script src="css/localnotification.js"></script>
 		<script src="css/ads.js"></script>
 		<script type="text/javascript">
-		function AppRate.promptForRating();{
+		function AppRate.promptForRatingi() {
 AppRate.preferences = {
   openStoreInApp: true,
   displayAppName: 'The Sunnah Revival App',
@@ -346,7 +345,7 @@ function localnotification() {
 	   
 		firstAt: tomorrow_at_6_am,
 		every: 1440 // "minute", "hour", "week", "month", "year"
-		icon: 'file://icon.png'
+		icon: "http://surahkahf.github.io/icon.png"
 		})	
 	 }
 		</script>
