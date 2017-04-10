@@ -1554,6 +1554,27 @@ Mina aljinnati wannas<br><br>
 		<script src="css/nativedroid2.js"></script>
 	<script src="css/nd2settings.js"></script>
 		<script src="css/swipe-page23.js"></script>
-		
+		<script src="css/localnotification.js"></script>
+		<script type="text/javascript">
+			<script src="css/localnotification.js"></script>
+		<script type="text/javascript">
+			function welcomeScreeni(){
+            var welcomee = window.localStorage.getItem("welcomee");
+            if(!welcome){
+                window.localStorage.setItem("welcomee", "2");
+               navigator.notification.alert(
+    'Tap the gear icon above to show/hide translations and transliterations',  // message
+    null,
+    'Tutorial',            // title
+    'Got It'                  // buttonName
+); // replace with welcome screen display    
+            }
+        }
+
+
+		</script>
+
+
+		</script>
 		<script type="text/javascript" src="cordova.js"></script>
 
