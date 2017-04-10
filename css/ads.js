@@ -2,18 +2,18 @@
   var admobid = {};
   if( /(android)/i.test(navigator.userAgent) ) {
     admobid = { // for Android
-      banner: 'ca-app-pub-6981212130280607/8129501976',
-      interstitial: 'ca-app-pub-6981212130280607/9606235175'
+      banner: 'ca-app-pub-6981212130280607/2899891177',
+      interstitial: 'ca-app-pub-6981212130280607/4376624370'
     };
   } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
     admobid = { // for iOS
-      banner: 'ca-app-pub-6981212130280607/8129501976',
-      interstitial: 'ca-app-pub-6981212130280607/9606235175'
+      banner: 'ca-app-pub-6981212130280607/2899891177',
+      interstitial: 'ca-app-pub-6981212130280607/4376624370'
     };
   } else {
     admobid = { // for Windows Phone
-      banner: 'ca-app-pub-6981212130280607/8129501976',
-      interstitial: 'ca-app-pub-6981212130280607/9606235175'
+      banner: 'ca-app-pub-6981212130280607/2899891177',
+      interstitial: 'ca-app-pub-6981212130280607/4376624370'
     };
   }
   function createSelectedBanner(){
