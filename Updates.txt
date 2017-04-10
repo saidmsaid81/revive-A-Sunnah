@@ -8,3 +8,8 @@ Updates
 7. Size should not exceed 10 MB best 8MB
 Timespan
 Release it before 15th March In shaa Allah
+
+
+1. Add Surah Al Sajdah in Mulk articles
+2. Add visit notification centre
+3. Add info for dua for waking up
