@@ -294,7 +294,8 @@
 }); return false;"   data-role="button" data-inline="true" > Disable </a>    </p>  
 <a href="#" onclick="cordova.plugins.notification.local.cancelAll(function() {
     alert('done');
-}, this);"   data-role="button" class="ui-btn clr-btn-blue" data-inline="true" > Disable All </a>
+}, this);"   data-role="button" data-role="toast"
+   data-toast-message="Simple toast message set by data-message"  class="ui-btn clr-btn-blue" data-inline="true" > Disable All </a>
 
 
                 </div>
