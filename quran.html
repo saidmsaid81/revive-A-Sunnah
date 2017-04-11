@@ -33,21 +33,17 @@
 }
 </style>
 <script type="text/javascript">
-	document.addEventListener('deviceready', this.onDeviceReady, false);
-	 function onDeviceReady() {
-	 	 welcomeScreeni();
-	 	 function welcomeScreeni(){
-            var welcomee = window.localStorage.getItem("welcomee");
-            if(!welcomee){
-                window.localStorage.setItem("welcomee", "2");
-               navigator.notification.alert(
-    'Tap the screen once to hide/show the header',  // message
+    var alertedi = localStorage.getItem('alertedi') || '';
+    if (alertedi != 'yesi') {
+     navigator.notification.alert(
+    'Tap the screen once to show/hide the header ',  // message
     null,
     'Tip',            // title
     'Got It'                  // buttonName
-); // replace with welcome screen display    
-            }
-        }
+); // replace
+     localStorage.setItem('alertedi','yesi');
+    }
+
 </script>
 
 

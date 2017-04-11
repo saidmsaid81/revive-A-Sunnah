@@ -17,22 +17,19 @@
 					/* Prevent FOUC */
 					body { opacity: 0; }
 				</style>
-				<script type="text/javascript">
-	document.addEventListener('deviceready', this.onDeviceReady, false);
-	 function onDeviceReady() {
-	 	 welcomeScreene();
-	 	 function welcomeScreene(){
-            var welcomeee = window.localStorage.getItem("welcomeee");
-            if(!welcomeee){
-                window.localStorage.setItem("welcomeee", "3");
-               navigator.notification.alert(
+				
+	  <script type="text/javascript">
+    var alerted = localStorage.getItem('alerted') || '';
+    if (alerted != 'yes') {
+     navigator.notification.alert(
     'Tap the settings icon above to show/hide translation and transliteration',  // message
     null,
     'Tip',            // title
     'Got It'                  // buttonName
-); // replace with welcome screen display    
-            }
-        }
+); // replace
+     localStorage.setItem('alerted','yes');
+    }
+
 </script>
 
 
