@@ -71,6 +71,12 @@
     $('#btn_hide').click(function(){
       AdMob.hideBanner();
     });
+    $('#btn_hidee').click(function(){
+      AdMob.hideBanner();
+    });
+    $('#btn_hideee').click(function(){
+      AdMob.hideBanner();
+    });
     // test interstitial ad
     $('#btn_prepare').click(function(){
       AdMob.prepareInterstitial({
