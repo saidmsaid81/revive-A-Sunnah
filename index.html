@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -308,9 +308,7 @@
 		<script src="css/jquery.mobile.min.js"></script>
 		
 		<script src="css/localnotification.js"></script>
-		<script type="text/javascript">
-			AppRate.promptForRating(false);
-		</script>
+		
 		<script type="text/javascript">
 			function welcomeScreen(){
             var welcome = window.localStorage.getItem("welcome");
@@ -319,7 +317,7 @@
                navigator.notification.alert(
     'Tap the bell icon above to manage reminders such as Suratul Kahf reminders on Friday',  // message
     null,
-    'Tutorial',            // title
+    'Tip',            // title
     'Got It'                  // buttonName
 ); // replace with welcome screen display    
             }

@@ -20,10 +20,10 @@
 				<script type="text/javascript">
 	document.addEventListener('deviceready', this.onDeviceReady, false);
 	 function onDeviceReady() {
-	 	 welcomeScreen();
-	 	 function welcomeScreen(){
-            var welcome = window.localStorage.getItem("welcomeee");
-            if(!welcome){
+	 	 welcomeScreene();
+	 	 function welcomeScreene(){
+            var welcomeee = window.localStorage.getItem("welcomeee");
+            if(!welcomeee){
                 window.localStorage.setItem("welcomeee", "3");
                navigator.notification.alert(
     'Tap the settings icon above to show/hide translation and transliteration',  // message
