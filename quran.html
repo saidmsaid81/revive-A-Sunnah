@@ -32,7 +32,23 @@
   margin: auto;
 }
 </style>
-
+<script type="text/javascript">
+	document.addEventListener('deviceready', this.onDeviceReady, false);
+	 function onDeviceReady() {
+	 	 welcomeScreen();
+	 	 function welcomeScreen(){
+            var welcome = window.localStorage.getItem("welcomee");
+            if(!welcome){
+                window.localStorage.setItem("welcomee", "2");
+               navigator.notification.alert(
+    'Tap the screen once to hide/show the header',  // message
+    null,
+    'Tip',            // title
+    'Got It'                  // buttonName
+); // replace with welcome screen display    
+            }
+        }
+</script>
 
 
 

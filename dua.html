@@ -17,6 +17,23 @@
 					/* Prevent FOUC */
 					body { opacity: 0; }
 				</style>
+				<script type="text/javascript">
+	document.addEventListener('deviceready', this.onDeviceReady, false);
+	 function onDeviceReady() {
+	 	 welcomeScreen();
+	 	 function welcomeScreen(){
+            var welcome = window.localStorage.getItem("welcomeee");
+            if(!welcome){
+                window.localStorage.setItem("welcomeee", "3");
+               navigator.notification.alert(
+    'Tap the settings icon above to show/hide translation and transliteration',  // message
+    null,
+    'Tip',            // title
+    'Got It'                  // buttonName
+); // replace with welcome screen display    
+            }
+        }
+</script>
 
 
 	</head>
