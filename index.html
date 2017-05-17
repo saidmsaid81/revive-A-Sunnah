@@ -240,68 +240,35 @@
             </div>
         <div data-role="popup" id="popupDialog1" >
 <div data-role="header">
-		<h1 class='nd-title'>Receive Notifications for:</h1>
+		<h1 class='nd-title'>Enable/Disable Notifications:</h1>
 	</div>
-                
+            <h5>Tick to enable untick to disable</h5>
+            <div id="checkbox-container">
+<form>
+<fieldset data-role="controlgroup">
 
-                <div data-role="content">
-     <h5><strong>Daily Notifications <a href="cards.html#twentyone" class="ui-btn ui-btn-inline  ui-btn-fab" data-ajax="false"><i class='zmdi zmdi-info'></i></a>
-</strong></h5> 
-            
- <p>Suratul Mulk</p> 
-             
-      <p> <input type="button" value="Enable" data-inline="true" onclick="localnotification();window.plugins.toast.showLongTop('Successfully Enabled ', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})">  
+    <label>
+        <input type="checkbox" name="checkbox-0 " id="checkboxi" >Suratul Mulk reminder every night
+    </label>
+    <label>
+    <input type="checkbox" name="checkbox-v-2b"  id="checkboxii">Suratul Kahf reminder on Friday Morning
+        </label>
+        <label>
+    <input type="checkbox" name="checkbox-v-2c"  id="checkboxiii">Reminder to fast Monday and Thursday
+        </label>
+        </fieldset>
+</form>
+</div>
 
-       <a href="#" onclick="cordova.plugins.notification.local.cancel(1, function() {
-    window.plugins.toast.showLongTop('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
-}); ; return false;"   data-role="button" data-inline="true" > Disable </a>    </p>        
 
-<h5><strong>Weekly Notifications <a href="cards.html#twentysix" class="ui-btn ui-btn-inline  ui-btn-fab" data-ajax="false"><i class='zmdi zmdi-info'></i></a>
-</strong></h5> 
-            
- <p>Suratul Kahf </p>
-             
-       <p><input type="button" value="Enable" data-inline="true" onclick="cordova.plugins.notification.local.schedule({
-		id: 2,
-		title: 'Have you read Surah Al Kahf',
-		text: 'Tap here to read now',
-	    firstAt: friday_in_morning,
-		every: 10080 // 
-		});window.plugins.toast.showLongTop('Successfully enabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})">  
 
-       <a href="#" onclick="cordova.plugins.notification.local.cancel(2, function() {
-   window.plugins.toast.showLongTop('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
-}); ; return false;"   data-role="button" data-inline="true" > Disable </a>    </p>      
-
-<p>Fasting(Monday/Thursday)</p>
-             
-      <p> <input type="button" value="Enable" data-inline="true" onclick="cordova.plugins.notification.local.schedule([{
-    id: 3,
-    title: 'The Sunnah Revival',
-    text: 'Reminder To fast Tomorrow Monday',
-    firstAt: sunday_in_night,
-   every: 10080
-},{
-    id: 4,
-    title: 'The Sunnah Revival',
-	text: 'Reminder To fast Tomorrow Thursday',
-   firstAt: wednesday_in_evening,
-	every: 10080
-}]);window.plugins.toast.showLongTop('Successfully enabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)}) ">  
-
-       <a href="#" onclick="cordova.plugins.notification.local.cancel([3, 4], function() {
-    window.plugins.toast.showLongTop('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
-}); return false;"   data-role="button" data-inline="true" > Disable </a>    </p>  
-<a href="#" onclick="cordova.plugins.notification.local.cancelAll(function() {
-    window.plugins.toast.showLongTop('Successfully Disabled All', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
-}, this);"   data-role="button" class="ui-btn clr-btn-blue" data-inline="true" > Disable All </a>
-
+               
 
                 </div>
             </div>
 
 
-		</div>
+		
 <div data-role="page" id="ramadan" class="nd2-no-menu-swipe">
 
 
@@ -342,20 +309,10 @@
 		
 		<script src="css/ads.js"></script>
 		
-		<script type="text/javascript">
-			
-function localnotification() {
-	 	cordova.plugins.notification.local.schedule({
-		id: 1,
-		title: "Reminder to recite Surah Al Mulk",
-		text: "Tap here to read now",
-	   
-		firstAt: tomorrow_at_6_am,
-		every: 1440 // "minute", "hour", "week", "month", "year"
 		
-		})	
-	 }
-		</script>
+			
+
+		
 		<script src="css/time.js"></script>
 		
 
@@ -364,6 +321,6 @@ function localnotification() {
 		<script src="css/nativedroid2.js"></script>
 		<script src="css/nd2settings.js"></script>
 		
-
+<script src="css/checkboxi.js"></script>
 	</body>
 </html>
