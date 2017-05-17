@@ -23,7 +23,7 @@
 	<body>
 	
 
-		<div data-role="page"id="categories" class="nd2-no-menu-swipe">
+		<div data-role="page" id="categories" class="nd2-no-menu-swipe">
 
 
 			
@@ -54,6 +54,7 @@
 				
 				<li><a href="cards.html#one" data-ajax="false" title="Why Revive the sunnah">Why Revive the sunnah</a></li>
 				<li><a href="cards.html#two" data-ajax="false" >How can You benefit from this app?</a></li>
+				<li><a href="#ramadan"  >[NEW] Sunnah acts in Ramadhan</a></li>
 				<li><a href="cards.html#four" data-ajax="false" >Salatul Duha | The Forenoon Prayer</a></li>
 				<li><a href="cards.html#five" data-ajax="false" >Entering and leaving bathroom</a></li>
 				<li><a href="cards.html#six" data-ajax="false" >Fasting Three days of each month</a></li>
@@ -301,7 +302,36 @@
 
 
 		</div>
-		
+<div data-role="page" id="ramadan" class="nd2-no-menu-swipe">
+
+
+			
+			<div data-role="header"  data-position="fixed"  class="wow fadeIn" >
+				<a href="#categories" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='zmdi zmdi-home'></i></a>
+				<h1 class="wow fadeIn" data-wow-delay='0.4s'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSunnah During Ramadhan</h1>
+
+</div>	
+<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+
+					
+				
+
+	        <ol data-role="listview" data-filter="true" data-filter-reveal="false"  data-filter-placeholder="Search for Sunnah...">
+				
+				<li><a href="cards.html#thirtyfour" data-ajax="false" title="Why Revive the sunnah">Upon sighting moon</a></li>
+				<li><a href="cards.html#thirtyfive" data-ajax="false" >Eat suhoor (pre-dawn meal)</a></li>
+				<li><a href="cards.html#thirtysix" data-ajax="false" >Hasten to Break the Fast</a></li>
+				<li><a href="cards.html#thirtyseven" data-ajax="false" >Upon breaking fast in someone's home</a></li>
+				<li><a href="cards.html#thirtyeight" data-ajax="false" >Generosity During Ramadan</a></li>
+				<li><a href="cards.html#thirtynine" data-ajax="false" >Response to Fighting or Abuse When Fasting</a></li>
+				<li><a href="cards.html#forty" data-ajax="false" >Striving During the Last 10 Nights</a></li>
+				<li><a href="cards.html#fortyone" data-ajax="false" >Laylatul Qadr (the Night of Power)</a></li>
+				<li><a href="cards.html#fortytwo" data-ajax="false" >Making Dua Whilst Fasting</a></li>
+				<li><a href="cards.html#fortythree" data-ajax="false" >Zakaat al-fitr</a></li>
+				<li><a href="cards.html#fortyfour" data-ajax="false" >Sunnah on Eid-ul-Fitr</a></li>
+				</ol>
+				</div></div>
+				
 								
 		<script src="css/jquery.min.js"></script>
 		<script src="css/jquery-ui.min.js"></script>
@@ -309,20 +339,7 @@
 		
 		<script src="css/localnotification.js"></script>
 		
-		<script type="text/javascript">
-			function welcomeScreen(){
-            var welcome = window.localStorage.getItem("welcome");
-            if(!welcome){
-                window.localStorage.setItem("welcome", "1");
-               navigator.notification.alert(
-    'Tap the bell icon above to manage reminders such as Suratul Kahf reminders on Friday',  // message
-    null,
-    'Tip',            // title
-    'Got It'                  // buttonName
-); // replace with welcome screen display    
-            }
-        }
-		</script>
+		
 		<script src="css/ads.js"></script>
 		
 		<script type="text/javascript">
