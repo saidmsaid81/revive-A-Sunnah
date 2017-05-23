@@ -1,4 +1,4 @@
-
+document.addEventListener('deviceready', this.onDeviceReady, false);
 	 function onDeviceReady() {
 	 	 welcomeScreen();
          AppRate.preferences.storeAppURL.android = 'market://details?id=com.ihyausunnah.thesunnahrevival';

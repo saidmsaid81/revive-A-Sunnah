@@ -40,7 +40,7 @@
 				<a href="index.html" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='zmdi zmdi-home'></i></a>
 
 				<h1 class="wow fadeIn" data-wow-delay='0.4s'>Intention to fast must be formed before Fajr</h1>
-				<a href="#" onclick="window.plugins.socialsharing.share(text[0].innerHTML, null, null, 'https://goo.gl/Ky8z01'); return false;" class=" ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-share'></i></a>
+				<a href="#" onclick="window.plugins.socialsharing.share(test, null, null, 'https://goo.gl/Ky8z01'); return false;" class=" ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-share'></i></a>
 
 </div>
 
@@ -88,7 +88,7 @@
 				<a href="index.html" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='zmdi zmdi-home'></i></a>
 
 				<h1 class="wow fadeIn" data-wow-delay='0.4s'>The ruling on Tarawih Prayer</h1>
-				<a href="#" onclick="window.plugins.socialsharing.share(text[1].innerHTML, null, null, 'https://goo.gl/Ky8z01'); return false;" class=" ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-share'></i></a>
+				<a href="#" onclick="window.plugins.socialsharing.share(itest, null, null, 'https://goo.gl/Ky8z01'); return false;" class=" ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-share'></i></a>
 
 </div>
 
@@ -98,7 +98,7 @@
 
 									
 
-									<div class="fatwa">
+									<div id="testing">
 <p><strong>Q: What is the opinion of the Fuqaha’ (Muslim jurists) and scholars of religion on Tarawih (special supererogatory night Prayer in Ramadan)? Is it twenty or eight Rak‘ahs (units of Prayer) - according to the Sunnah? If the Sunnah is to offer it as eight Rak‘ahs, why is it offered as twenty Rak‘ahs in Al-Masjid Al-Nabawy (the Prophet’s Mosque in Madinah)? Most people conclude from that it is the Sunnah to offer it as twenty Rak‘ahs.</strong></p>
 
 <p>A: Tarawih is a Sunnah (supererogatory act of worship following the example of the Prophet) initiated by the Messenger of Allah (peace be upon him). There are proofs that he (peace be upon him) never offered more than eleven Rak‘ahs, whether in Ramadan or at any other time.</p>
@@ -139,7 +139,7 @@
 				<a href="index.html" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='zmdi zmdi-home'></i></a>
 
 				<h1 class="wow fadeIn" data-wow-delay='0.4s'>Experiencing Istihadah during the daytime in Ramadan</h1>
-				<a href="#" onclick="window.plugins.socialsharing.share(text[2].innerHTML, null, null, 'https://goo.gl/Ky8z01'); return false;" class=" ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-share'></i></a>
+				<a href="#" onclick="window.plugins.socialsharing.share(h, null, null, 'https://goo.gl/Ky8z01'); return false;" class=" ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-share'></i></a>
 
 </div>
 
@@ -149,7 +149,7 @@
 
 									
 
-									<div class="fatwa">
+									<div id="te">
 
 <p><strong>Q: What is the ruling on the blood that comes out of a woman outside the menstrual or post-partum period? Should she make up later for the days in which she experiences such blood during the daytime of Ramadan?</strong></p>
 
@@ -174,7 +174,7 @@
 				<a href="index.html" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='zmdi zmdi-home'></i></a>
 
 				<h1 class="wow fadeIn" data-wow-delay='0.4s'>Leaving to say Du‘a’-ul-Qunut during some Tarawih Prayers</h1>
-				<a href="#" onclick="window.plugins.socialsharing.share(text[3].innerHTML, null, null, 'https://goo.gl/Ky8z01'); return false;" class=" ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-share'></i></a>
+				<a href="#" onclick="window.plugins.socialsharing.share(jaribu, null, null, 'https://goo.gl/Ky8z01'); return false;" class=" ui-btn ui-btn-inline ui-btn-fab"><i class='zmdi zmdi-share'></i></a>
 
 </div>
 
@@ -1007,6 +1007,15 @@ Second: The Prophet (peace be upon him) exhorted to stay up and pray Qiyam (opti
 <script type="text/javascript">
 	var text= document.getElementById('said');
 	var test= text.innerHTML
+
+	var saidi= document.getElementById('testing');
+	var itest= saidi.textContent;
+
+	var sa= document.getElementById('te');
+	var h= sa.innerText;
+
+	var mwisho= document.getElementsByClassName('fatwa');
+	var jaribu= mwisho[0].innerHTML;
 
 
 
