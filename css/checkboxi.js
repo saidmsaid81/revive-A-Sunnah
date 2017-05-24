@@ -13,6 +13,9 @@
    cordova.plugins.notification.local.cancel(1, function() {
    window.plugins.toast.showLongTop('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
 });
+ cordova.plugins.notification.local.on("click", function (notification, state) {
+    alert(notification.id + " was clicked");
+}, this)
 });
   $("#checkboxii").change(function() {
   if ($(this).is(":checked")){
