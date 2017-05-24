@@ -104,7 +104,9 @@
     // on mobile device, we must wait the 'deviceready' event fired by cordova
     if(/(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent)) {
       document.addEventListener('deviceready', this.onDeviceReady, false);
-   function onDeviceReady() {
+   
+    } else {
+      function onDeviceReady() {
      welcomeScreen();
          AppRate.preferences.storeAppURL.android = 'market://details?id=com.ihyausunnah.thesunnahrevival';
         AppRate.preferences.openStoreInApp = true;
@@ -115,7 +117,5 @@
 
     
    }
-    } else {
-      onDeviceReady();
     }
   });
