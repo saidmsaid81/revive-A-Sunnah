@@ -67,13 +67,13 @@ cordova.plugins.notification.local.on("click", function (notification, state) {
   $("#checkboxv").change(function() {
   if ($(this).is(":checked")){
     cordova.plugins.notification.local.schedule({
-    id: 3,
+    id: 5,
     title: 'The Sunnah Revival',
     text: 'Reminder To read Morning Adhkar',
     firstAt: subh_6_am,
    every: 1440
 },{
-    id: 4,
+    id: 6,
     title: 'The Sunnah Revival',
   text: 'Reminder To read read evening adhkar',
    firstAt: masa_4_pm,
@@ -81,7 +81,7 @@ cordova.plugins.notification.local.on("click", function (notification, state) {
 });window.plugins.toast.showLongTop('Successfully enabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
   }
   else 
-   cordova.plugins.notification.local.cancel([6, 7], function() {
+   cordova.plugins.notification.local.cancel([5, 6], function() {
     window.plugins.toast.showLongTop('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
 });
  cordova.plugins.notification.local.on("click", function (notification, state) {
@@ -93,21 +93,21 @@ cordova.plugins.notification.local.on("click", function (notification, state) {
  $("#checkboxvi").change(function() {
   if ($(this).is(":checked")){
     cordova.plugins.notification.local.schedule({
-    id: 1,
+    id: 7,
     title: "Todays Hadith",
     text: "Tap here to read now",
      
-    firstAt: hadith_at_8_am,
+    firstAt: hadith_8_am,
     every: 1440 // "minute", "hour", "week", "month", "year"
     });window.plugins.toast.showLongTop('Successfully enabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
   }
   else 
-   cordova.plugins.notification.local.cancel(1, function() {
+   cordova.plugins.notification.local.cancel(7, function() {
    window.plugins.toast.showLongTop('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
 });
  
 cordova.plugins.notification.local.on("click", function (notification, state) {
-    window.open('https://thesunnahrevival.wordpress.com/category/daily-inspiration/','_blank');displayToast();
+    displayToast();window.open('https://thesunnahrevival.wordpress.com/category/daily-inspiration/','_blank');
 }, this)
 });
 
@@ -115,7 +115,7 @@ cordova.plugins.notification.local.on("click", function (notification, state) {
   $("#checkboxiv").change(function() {
   if ($(this).is(":checked")){
     cordova.plugins.notification.local.schedule({
-    id: 5,
+    id: 8,
     title: 'Reminder to recite Suratul Kahf',
     text: 'Tap here to read now',
       firstAt: thursday_in_night,
@@ -123,7 +123,7 @@ cordova.plugins.notification.local.on("click", function (notification, state) {
     });window.plugins.toast.showLongTop('Successfully enabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
   }
   else 
-   cordova.plugins.notification.local.cancel([5, function() {
+   cordova.plugins.notification.local.cancel([8, function() {
     window.plugins.toast.showLongTop('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
 }])
  cordova.plugins.notification.local.on("click", function (notification, state) {
