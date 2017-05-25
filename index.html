@@ -12,12 +12,32 @@
 		<link rel="stylesheet" href="css/fonti-awesome.min.css" />
 		<link rel="stylesheet" href="css/nativedroid2.css" />
 		<link rel="stylesheet" href="css/nativedroid2.color.blue.css" />
+		
 				<style>
 					/* Prevent FOUC */
 					body { opacity: 0; }
 				</style>
-
-	
+<style>
+.badged:after{
+    content:attr(data-count);
+    font-size:12px;
+    text-shadow: 0 1px #444;
+    text-align:center;
+    position:relative;
+    color:#EFEFEF;
+    display:inline-block;
+    z-index:2000;
+    top:0px;
+    right:-60px;
+    border-radius:50%;
+    padding:0px 3px;
+    /*min-width:22px;*/
+    border:2px solid #eee;
+    box-shadow: -1px 1px 4px #444;
+    margin:0 4px;
+    background: #ff0505;
+}
+	</style>
 
 	</head>
 	<body>
@@ -30,7 +50,8 @@
 			<div data-role="header"  data-position="fixed"  class="wow fadeIn" >
 				
 				<h1 class="wow fadeIn" data-wow-delay='0.4s'>The Sunnah Revival</h1>
-<a href="#popupDialog1" data-rel="popup" class="ui-btn ui-btn-inline ui-btn-fab ui-btn-right" style="margin-right: 42px; visibility: visible; animation-delay: 1s; animation-name: fadeIn;"><i class='zmdi zmdi-notifications '></i></a>
+				
+<a href="#popupDialog1"  data-rel="popup" class="ui-btn ui-btn-inline ui-btn-fab ui-btn-right" style="margin-right: 42px; visibility: visible; animation-delay: 1s; animation-name: fadeIn;"><i class='zmdi zmdi-notifications '></i></a>
 <a href="#popupDialog"  data-rel="popup" class="ui-btn ui-btn-inline ui-btn-fab ui-btn-right"><i class='zmdi zmdi-more-horiz'></i></a>
 				<ul data-role="nd2tabs" data-swipe="true">
 
@@ -55,7 +76,8 @@
 				
 				<li><a href="cards.html#one" data-ajax="false" title="Why Revive the sunnah">Why Revive the sunnah</a></li>
 				<li><a href="cards.html#two" data-ajax="false" >How can You benefit from this app?</a></li>
-				<li><a href="#ramadan"  >[NEW] Sunnah acts in Ramadhan</a></li>
+				<li><a href="#ramadan"  ><span  class="badged" 
+				 data-count="New">Sunnah acts in Ramadhan</span> </a></li>
 				<li><a href="cards.html#four" data-ajax="false" >Salatul Duha | The Forenoon Prayer</a></li>
 				<li><a href="cards.html#five" data-ajax="false" >Entering and leaving bathroom</a></li>
 				<li><a href="cards.html#six" data-ajax="false" >Fasting Three days of each month</a></li>
@@ -113,6 +135,7 @@
 				 <ol data-role="listview">
 				<li><a href="hadith.html#one" data-ajax="false" >Imam Nawawi's 40 Hadith</a></li>
 				<li><a href="hadith.html#two" data-ajax="false" >100 Short Hadith</a></li>
+				<li><a href="https://thesunnahrevival.wordpress.com/category/daily-inspiration/" onclick="window.open(this.href,'_blank');displayToast(); return false;" >Daily Hadith</a></li>
 				<br>
 				<br>
 				<br>
@@ -159,7 +182,7 @@
 												</li>
 				<li><a href="quran.html#one" id='btn_hide' onclick="window.plugins.insomnia.keepAwake();window.plugins.toast.showLongBottom('Tap the screen once to hide/show the header', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})" data-ajax="false" >Suratul Kahf</a></li>
 				<li><a href="quran.html#thirteen" id='btn_hidee' onclick="window.plugins.insomnia.keepAwake();;window.plugins.toast.showLongBottom('Tap the screen once to hide/show the header', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})" data-ajax="false" >Suratul Mulk</a></li>
-				<li><a href="quran.html#sixteen" id='btn_hideee' onclick="window.plugins.insomnia.keepAwake();;window.plugins.toast.showLongBottom('Tap the screen once to hide/show the header', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})" data-ajax="false" >Suratul Sajdah</a></li>
+				<li><a href="quran.html#sixteen" id='btn_hideee' onclick="window.plugins.insomnia.keepAwake();window.plugins.toast.showLongBottom('Tap the screen once to hide/show the header', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})" data-ajax="false" >Suratul Sajdah</a></li>
 
 </ol>
 <br>
@@ -269,7 +292,7 @@
                 <div data-role="content">
                     <a href="#" onclick="window.plugins.socialsharing.share('Have a look at the Sunnah Revival App \n\n', null, null, 'https://goo.gl/Ky8z01'); return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Share App</a>
                     <a href="dua.html#six"  data-role="button" data-inline="true" data-ajax="false" class="ui-btn ui-btn-primary"> About App</a>
-                    
+                   <a href="https://thesunnahrevival.wordpress.com/" class="ui-btn ui-btn-primary" onclick="window.open(this.href,'_blank');displayToast(); return false;" >Visit Blog</a>
                     <a href="market://details?id=com.ihyausunnah.thesunnahrevival"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Rate this App</a>
                      <a href="mailto:thesunnahrevival.tsr@gmail.com?&subject=The%20Sunnah%20Revival%20App&body=**Please%20write%20your%20feedback%20here%20in%20English**%0A%0ASent%20from%3A%0AThe%20Sunnah%20Revival%20Android%20App%20Vesion%201.0.2"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Send Feedback</a>
                      
@@ -283,21 +306,30 @@
             </div>
         <div data-role="popup" id="popupDialog1" >
 <div data-role="header">
-		<h1 class='nd-title'>Enable/Disable Notifications:</h1>
+		<h1 class='nd-title'>Manage Notifications:</h1>
 	</div>
             <h5>Tick to enable untick to disable</h5>
             <div id="checkbox-container">
 <form>
 <fieldset data-role="controlgroup">
 
-    <label>
-        <input type="checkbox" name="checkbox-0 " id="checkboxi" >Suratul Mulk reminder every night
+    <label style="font-size: 100%">
+       <input type="checkbox" name="checkbox-0 " id="checkboxi" >Suratul Mulk reminder every night
     </label>
-    <label>
+   <label style="font-size: 100%">
     <input type="checkbox" name="checkbox-v-2b"  id="checkboxii">Suratul Kahf reminder on Friday Morning
         </label>
-        <label>
-    <input type="checkbox" name="checkbox-v-2c"  id="checkboxiii">Reminder to fast Monday and Thursday
+         <label style="font-size: 100%">
+    <input type="checkbox" name="checkbox-v-2b"  id="checkboxiv">Suratul Kahf reminder on Thursday Night
+        </label>
+         <label style="font-size: 100%">
+  <input type="checkbox" name="checkbox-v-2c"  id="checkboxiii">Reminder to fast Monday and Thursday
+        </label>
+         <label style="font-size: 100%">
+  <input type="checkbox" name="checkbox-v-2d"  id="checkboxv">Reminder to read Morning and Evening Adhkar(experimental)
+  </label>
+         <label style="font-size: 100%">
+  <input type="checkbox" name="checkbox-v-2e"  id="checkboxvi">Daily Hadith Reminder
         </label>
         </fieldset>
 </form>
@@ -342,21 +374,38 @@
 				</ol>
 				</div></div>
 				
-								
+				<script type="text/javascript">
+	function displayToast() {
+	window.plugins.toast.showLongBottom('Loading hadith...', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
+	};
+	
+</script>
 		<script src="css/jquery.min.js"></script>
 		<script src="css/jquery-ui.min.js"></script>
 		<script src="css/jquery.mobile.min.js"></script>
 		
 		
-		
+		</script>
 		
 		<script src="css/ads.js"></script>
+		
 		<script src="css/localnotification.js"></script>
 		
-		
-			
+		<script type="text/javascript">
+			function welcomeScreen(){
+            var welcome = window.localStorage.getItem("welcome");
+            if(!welcome){
+                window.localStorage.setItem("welcome", "1");
+               navigator.notification.alert(
+    'Tap the bell icon above to manage reminders such as Suratul Kahf reminders on Friday',  // message
+    null,
+    'Tip',            // title
+    'Got It'                  // buttonName
+); // replace with welcome screen display    
+            }
+        }
+</script>
 
-		
 		<script src="css/time.js"></script>
 		
 

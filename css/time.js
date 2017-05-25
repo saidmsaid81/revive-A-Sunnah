@@ -5,6 +5,25 @@ var today = new Date();
 		tomorrow.setMinutes(00);
 		tomorrow.setSeconds(00);
 		var tomorrow_at_6_am = new Date(tomorrow);
+		var subh= new Date();
+		subh.setDate(today.getDate());
+		subh.setHours(6);
+		subh.setMinutes(00);
+		subh.setSeconds(00);
+		var subh_6_am= new Date(subh);
+		var masa= new Date();
+		masa.setDate(today.getDate());
+		masa.setHours(16);
+		masa.setMinutes(30);
+		masa.setSeconds(00);
+		var masa_4_pm= new Date(masa);
+		var hadith= new Date();
+		hadith.setDate(today.getDate());
+		hadith.setHours(8);
+		hadith.setMinutes(00);
+		hadith.setSeconds(00);
+		var hadith_8_am= new Date(hadith);
+
 
 		var friday = new Date();
 		friday.setDate(friday.getDate() + (1 + 4 - friday.getDay()) % 7);
@@ -32,4 +51,14 @@ var evening =new Date()
 		evening.setMinutes(0);
 		evening.setSeconds(0);
 		var wednesday_in_evening = new Date(evening);
+
+		var thursday = new Date();
+        thursday.setDate(thursday.getDate() + (1 + 3 - thursday.getDay()) % 7);
+var night =new Date()
+        night.setDate(thursday.getDate());
+        night.setHours(20);
+        night.setMinutes(0);
+        night.setSeconds(0);
+        var thursday_in_night = new Date(night);
+
 
