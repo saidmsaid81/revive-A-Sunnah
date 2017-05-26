@@ -17,7 +17,7 @@
 });
  
 cordova.plugins.notification.local.on("click", function (notification, state) {
-    window.open('quran.html#thirteen');
+   AdMob.hideBanner(); window.open('quran.html#thirteen');
 }, this)
 });
   $("#checkboxii").change(function() {
@@ -35,13 +35,13 @@ cordova.plugins.notification.local.on("click", function (notification, state) {
    window.plugins.toast.showLongTop('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
 });
  cordova.plugins.notification.local.on("click", function (notification, state) {
-    window.open('quran.html#one');
+    AdMob.hideBanner();window.open('quran.html#one');
 }, this)
 });
 
   $("#checkboxiii").change(function() {
   if ($(this).is(":checked")){
-    cordova.plugins.notification.local.schedule({
+    cordova.plugins.notification.local.schedule([{
     id: 3,
     title: 'The Sunnah Revival',
     text: 'Reminder To fast Tomorrow Monday',
@@ -53,41 +53,37 @@ cordova.plugins.notification.local.on("click", function (notification, state) {
   text: 'Reminder To fast Tomorrow Thursday',
    firstAt: wednesday_in_evening,
   every: 10080
-});window.plugins.toast.showLongTop('Successfully enabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
-  }
-  else 
-   cordova.plugins.notification.local.cancel([3, 4], function() {
-    window.plugins.toast.showLongTop('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
+}]);window.plugins.toast.showLongTop('Successfully enabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
+
+else 
+   cordova.plugins.notification.local.cancel(3,4, function() {
+   window.plugins.toast.showLongTop('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
 });
- cordova.plugins.notification.local.on("click", function (notification, state) {
-    window.open('cards.html#twentythree');
-}, this)
-});
+
+}};
 
   $("#checkboxv").change(function() {
   if ($(this).is(":checked")){
-    cordova.plugins.notification.local.schedule({
+    cordova.plugins.notification.local.schedule([{
     id: 5,
     title: 'The Sunnah Revival',
-    text: 'Reminder To read Morning Adhkar',
+    text: 'Reminder To read morning adhkaar',
     firstAt: subh_6_am,
-   every: 1440
+   every: 10080
 },{
     id: 6,
     title: 'The Sunnah Revival',
-  text: 'Reminder To read read evening adhkar',
+  text: 'Reminder To read evening adhkar',
    firstAt: masa_4_pm,
-  every: 1440
-});window.plugins.toast.showLongTop('Successfully enabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
-  }
-  else 
-   cordova.plugins.notification.local.cancel([5, 6], function() {
-    window.plugins.toast.showLongTop('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
+  every: 10080
+}]);window.plugins.toast.showLongTop('Successfully enabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
+
+else 
+   cordova.plugins.notification.local.cancel(5,6, function() {
+   window.plugins.toast.showLongTop('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
 });
- cordova.plugins.notification.local.on("click", function (notification, state) {
-    window.open('dua.html#four');
-}, this)
-});
+
+}};
 
 
  $("#checkboxvi").change(function() {
@@ -107,7 +103,7 @@ cordova.plugins.notification.local.on("click", function (notification, state) {
 });
  
 cordova.plugins.notification.local.on("click", function (notification, state) {
-    displayToast();window.open('https://thesunnahrevival.wordpress.com/category/daily-inspiration/','_blank');
+    AdMob.hideBanner();displayToast();window.open('https://thesunnahrevival.wordpress.com/category/daily-inspiration/','_blank');
 }, this)
 });
 
@@ -126,8 +122,8 @@ cordova.plugins.notification.local.on("click", function (notification, state) {
    cordova.plugins.notification.local.cancel([8, function() {
     window.plugins.toast.showLongTop('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
 }])
- cordova.plugins.notification.local.on("click", function (notification, state) {
-    window.open('quran.html#one');
+ ;cordova.plugins.notification.local.on("click", function (notification, state) {
+    AdMob.hideBanner();window.open('quran.html#one');
 }, this)
 });
 
