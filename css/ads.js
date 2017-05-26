@@ -43,7 +43,7 @@
     AdMob.setOptions({
       // adSize: 'SMART_BANNER',
       position: AdMob.AD_POSITION.BOTTOM_CENTER,
-      isTesting: false, // set to true, to receiving test ad for testing purpose
+      isTesting: true, // set to true, to receiving test ad for testing purpose
       bgColor: 'white', // color name, or '#RRGGBB'
       // autoShow: true // auto show interstitial ad when loaded, set to false if prepare/show
       // offsetTopBar: false, // avoid overlapped by status bar, for iOS7+
