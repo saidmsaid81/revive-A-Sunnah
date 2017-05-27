@@ -342,8 +342,19 @@
                
 
                 </div>
-            </div>
+   <div data-role="popup" id="popupupdate" >
+<div data-role="header">
+		<h1 class='nd-title'>What's New</h1>
+	</div>
+<li>Added more notification reminders such as reminder to read Morning and evening adhkaar.(Tap <i class='zmdi zmdi-notifications '></i> above to manage notifications) </li>
+<li>Added 10+ ramadhan Sunnah</li>
+<li>Added 25+ fatwas (rulings) concerning Ramadhan. Swipe left twice to see them.</li>
+<li>Improved Notification Interface and fixed minor bugs.</li>
+<a href="#" class="ui-btn">OK</a>
 
+
+            </div>
+</div>
 
 		
 <div data-role="page" id="ramadan" class="nd2-no-menu-swipe">
@@ -402,12 +413,7 @@
             var update = window.localStorage.getItem("update");
             if(!update){
                 window.localStorage.setItem("update", "3");
-               navigator.notification.alert(
-    '1. Added new notification reminders such as morning and evening reminders.Tap the bell icon above to enable/disable notifications\n\n2.Added 30 Ramadan fatwas(rulings)\n\n3.Added 10 Sunnah acts in Ramadan ',  // message
-    null,
-    'New!',            // title
-    'Got It'                  // buttonName
-); // replace with welcome screen display    
+               $('#popupupdate').popup('open'); // replace with welcome screen display    
             }
         }
 </script>
