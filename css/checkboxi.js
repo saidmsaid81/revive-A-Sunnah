@@ -128,7 +128,7 @@ cordova.plugins.notification.local.on("click", function (notification, state) {
     });window.plugins.toast.showLongTop('Successfully enabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
   }
   else 
-   cordova.plugins.notification.local.cancel(2, function() {
+   cordova.plugins.notification.local.cancel(8, function() {
    window.plugins.toast.showLongTop('Successfully Disabled', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)})
 });
  cordova.plugins.notification.local.on("click", function (notification, state) {
