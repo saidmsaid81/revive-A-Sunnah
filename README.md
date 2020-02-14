@@ -1,5 +1,7 @@
 # The Sunnah Revival Android App
 
+<img src=https://build.phonegap.com/apps/1621387/badge/236469642/android.svg />  <img src=https://build.phonegap.com/apps/1621387/badge/236469642/version.svg />  <img src=https://build.phonegap.com/apps/1621387/badge/236469642.svg />
+
 <h4>Overview of this App</h4>
 
 - It contains 30+ Sunan of the Prophet (صلى الله عليه و سلم) that you can apply in your daily life
