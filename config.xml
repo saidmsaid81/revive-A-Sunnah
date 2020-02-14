@@ -73,10 +73,13 @@
 
 		
     <!-- Define app icon for each platform. -->
-    <icon src="icon.png" />
+    <platform name="android">
+          <icon src="icon.png" />
+    </platform>
     
-    <!-- Define app splash screen for each platform. -->
-    <gap:splash src="splash.png" />
+    <platform name="android">
+        <splash src="splash.png" />
+    </platform>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
     <string>100</string>
