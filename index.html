@@ -436,19 +436,25 @@
 		<script src="js/localnotification.js"></script>
 		
 		<script type="text/javascript">
-			function welcomeScreen(){
+			document.addEventListener('deviceready', this.onDeviceReady, false);
+			function onDeviceReady() {
+				
+				(function() {
 				var date = new Date();
 				var day = date.getDate();
 				var update = window.localStorage.getItem("update");
 				if(update != day){
 					window.localStorage.setItem("update", day);
-            	}
+				}
 				else {
 					document.getElementById("update").style.display = "none"   
 				}
-        	}
-			welcomeScreen()
-</script>
+				})()
+				
+			}
+			
+			
+		</script>
 		<script src="js/time.js"></script>
 		
 
