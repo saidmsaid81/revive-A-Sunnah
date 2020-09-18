@@ -67,10 +67,38 @@
 
 			<div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
 
-					<div data-role="nd2tab"
-								data-tab="sunnah">
+					<div data-role="nd2tab"data-tab="sunnah">
 
-				
+						<div id="update" class="nd2-card card-media-right card-media-small" style="background-color: yellow;">
+
+
+							<div class="card-media">
+								<img src="icon.png">
+							</div>
+		
+							<div class="card-title has-supporting-text">
+								<h3 class="card-primary-title">Important Info</h3>
+								<h5 class="card-subtitle">Assalam alaykum,</h5>
+							</div>
+		
+							<div class="card-supporting-text has-action has-title">
+								Due to unavoidable circumstances, support for this app has <strong>ended.</strong> We recommend <strong>updating to the new and improved version of the app</strong> using the button below. <br><br>
+								Thanks for your continued support and sorry for any inconvenience caused.
+							</div>
+		
+							<div class="card-action">
+								<div class="row between-xs">
+									<div class="col-xs-12">
+										<div class="box">
+											<a href="market://details?id=com.thesunnahrevival.app" class="ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button">Download New App</a>
+											<a href="#" onclick="document.getElementById('update').style.display = 'none'" class="ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button">Remind Later</a>
+											<a href="https://thesunnahrevival.com/?p=3123" class="ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button" onclick="window.open(this.href,'_system');  return false;">Read Full blog post</a>
+										</div>
+									</div>
+								</div>
+							</div>
+		
+						</div>
 
 	        <ol data-role="listview" data-filter="true" data-filter-reveal="false"  data-filter-placeholder="Search for Sunnah...">
 				
@@ -291,7 +319,7 @@
                 
 
                 <div data-role="content">
-                    <a href="#" onclick="window.plugins.socialsharing.share('Have a look at the Sunnah Revival App \n\n', null, null, 'https://goo.gl/Ky8z01'); return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Share App</a>
+                    <a href="#" onclick="window.plugins.socialsharing.share('Have a look at the Sunnah Revival App \n\n', null, null, 'https://bit.ly/new-tsr-app'); return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Share App</a>
                     <a href="dua.html#six"  data-role="button" data-inline="true" data-ajax="false" class="ui-btn ui-btn-primary"> About App</a>
 				   <a href="https://thesunnahrevival.wordpress.com/" class="ui-btn ui-btn-primary" onclick="window.open(this.href,'_blank');displayToast(); return false;" >Visit Blog</a>
 				   <a href="market://details?id=com.thesunnahrevival.supportdeveloper"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Support The Developer</a>
@@ -408,13 +436,18 @@
 		<script src="js/localnotification.js"></script>
 		
 		<script type="text/javascript">
-		// 	function welcomeScreen(){
-        //     var update = window.localStorage.getItem("update");
-        //     if(!update){
-        //         window.localStorage.setItem("update", "3");
-        //        $('#popupupdate').popup('open'); // replace with welcome screen display    
-        //     }
-        // }
+			function welcomeScreen(){
+				var date = new Date();
+				var day = date.getDate();
+				var update = window.localStorage.getItem("update");
+				if(update != day){
+					window.localStorage.setItem("update", day);
+            	}
+				else {
+					document.getElementById("update").style.display = "none"   
+				}
+        	}
+			welcomeScreen()
 </script>
 		<script src="js/time.js"></script>
 		
